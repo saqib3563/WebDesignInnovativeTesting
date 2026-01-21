@@ -11,6 +11,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { AnimationService } from "@/utils/animations/service-section";
 import Link from "next/link";
+import { useGSAP } from "@/hooks/useGSAP";
 
 const ServiceSection = () => {
   const sectionRef = useRef(null);
@@ -22,7 +23,7 @@ const ServiceSection = () => {
 //     "Copy Writing",
 //     "Branding & Strategy",
 //   ];
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     if (!sectionRef.current || !diamondRef.current) return;

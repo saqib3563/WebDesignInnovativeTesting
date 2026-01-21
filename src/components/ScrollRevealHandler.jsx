@@ -2,9 +2,10 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from "@/hooks/useGSAP";
 
 export default function ScrollRevealHandler() {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const elements = document.querySelectorAll(".reveal-text");

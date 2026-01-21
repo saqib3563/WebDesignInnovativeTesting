@@ -127,7 +127,7 @@ header {
   top: 0px;
   z-index: 2;
   padding: 0px 70px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   /* backdrop-filter: blur(4.2px);
   -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(255, 255, 255, 0.27);
@@ -1890,7 +1890,7 @@ button:hover~.cursor {
 
 /* CSS */
 .sidebar-open-body {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   overflow: hidden;
 }
@@ -3166,17 +3166,40 @@ button:hover~.cursor {
   color: var(--primary-color);
   font-family: var(--inter-font);
   width: 100%;
+  position: relative;
+}
+
+.portfolio-top-wrap .portfolio-counter-wrapper .counter-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(#480068, #92278f);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  transform-origin: bottom;
+}
+
+.portfolio-top-wrap .portfolio-counter-wrapper .counter-box:hover::after {
+  transform: scaleY(1);
 }
 
 .portfolio-counter-wrapper .counter-box h4 {
   font-size: 40px;
   margin-bottom: 12px;
   font-weight: 700;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio-counter-wrapper .counter-box p {
   font-size: 18px;
   margin-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .stream-sec-2 .about-content-arap .abt-para {
@@ -3373,4 +3396,46 @@ button:hover~.cursor {
 
 .lottie-purple {
   filter: invert(21%) sepia(60%) saturate(5204%) hue-rotate(203deg) brightness(86%) contrast(103%);
+}
+
+/* Contact Page start */
+
+
+.Contact-sec {
+  padding: 60px 0;
+}
+
+.cont-desc {
+  font-size: 24px;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.contact-page-form {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 1rem 5rem;
+  background-image: url("./(web)/assets/images/map.webp");
+}
+
+.contact-page-form input,
+.contact-page-form textarea {
+  background-color: #0a0a0a;
+  border: 2px solid var(--accent-purple);
+  color: var(--primary-color);
+  font-size: 30px;
+  border-radius: 1.2rem;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 11px 19px;
+}
+
+.contact-page-form textarea {
+  height: 314px;
+  resize: none;
+}
+
+.contact-page-form .fancy-btn {
+  margin: 0 auto;
 }
