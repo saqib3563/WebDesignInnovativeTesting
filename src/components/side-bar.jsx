@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
 // import logoImage from "@/app/(web)/assets/images/logo.avif"
-import logoImage from "@/app/(web)/assets/images/logo-updated.png"
+import logoImage from "@/app/(web)/assets/images/inner-logo.png"
 import iconMenu from "@/app/(web)/assets/images/Icon.png";
 import { useRouter, usePathname } from "next/navigation";
 import FancyButton from "./FancyButton";
@@ -72,7 +72,7 @@ const SideBar = () => {
       <div className="side-bar" ref={sidebarRef}>
         {/* Header */}
         <div className="sidebar-header">
-          <Image src={logoImage} alt="logo" width={50} height={40} />
+          <Image src={logoImage} alt="logo" width={45} height={45} />
           <button className="menu-btn" onClick={toggleMenu}>
             <Image src={iconMenu} alt="menu_icon" width={30} height={30} />
           </button>
