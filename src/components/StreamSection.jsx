@@ -59,19 +59,19 @@ const StreamSection = () => {
 
             <div className="portfolio-counter-wrapper">
               <div className="counter-box">
-                <h4>0%</h4>
+                <h4>98%</h4>
                 <p>
                   Customer <br /> satisfaction
                 </p>
               </div>
               <div className="counter-box">
-                <h4>0+</h4>
+                <h4>3+</h4>
                 <p>
                   Years of <br /> experience
                 </p>
               </div>
               <div className="counter-box">
-                <h4>0+</h4>
+                <h4>120+</h4>
                 <p>
                   Projects <br /> Completed
                 </p>

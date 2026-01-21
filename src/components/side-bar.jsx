@@ -14,7 +14,7 @@ const menuItems = [
   { label: "HOME", path: "/" },
   { label: "ABOUT US", path: "/about" },
   { label: "SERVICES", path: "/services" },
-  { label: "CAREERS", path: "/careers" },
+  { label: "CONTACT US", path: "/contact-us" },
   { label: "BLOGS", path: "/blogs" },
   { label: "CASE STUDIES", path: "/case-studies" },
   { label: "NEWS ROOM", path: "/news-room" },

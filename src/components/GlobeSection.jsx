@@ -17,6 +17,7 @@ import client_image_9 from "@/app/(web)/assets/images/client_image-9.png";
 
 import Image from "next/image";
 import FancyButton from "./FancyButton";
+import { useGSAP } from "@/hooks/useGSAP";
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
@@ -151,7 +152,7 @@ const GlobeSection = () => {
   const circleRef = useRef(null);
   const [active, setActive] = useState(9);
   const [windowInstance, setWindowInstance] = useState(null);
-  useEffect(() => {
+  useGSAP(() => {
     setWindowInstance(window);
   }, []);
   const calcWidth = useCallback(() => {
@@ -169,7 +170,7 @@ const GlobeSection = () => {
 
     return 500;
   }, [windowInstance]);
-  useEffect(() => {
+  useGSAP(() => {
     if (!circleRef.current) return;
 
     const initAnimation = () => {
