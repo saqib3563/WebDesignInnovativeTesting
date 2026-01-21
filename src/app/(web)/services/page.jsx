@@ -1,9 +1,9 @@
 import ApproachSection from "@/components/ApproachSection";
 import FaqSection from "@/components/FaqsSection";
 import GlobeSection from "@/components/GlobeSection";
+import OurServices from "@/components/OurServices";
 import ServiceBanner from "@/components/ServiceBanner";
 import ServiceRailSection from "@/components/ServicesRailSection";
-import StreamSection from "@/components/StreamSection";
 import React from "react";
 
 const page = () => {
@@ -13,8 +13,9 @@ const page = () => {
 
       <ServiceRailSection/>
 
-      <ApproachSection />
+      <OurServices/>
 
+      <ApproachSection />
 
       <GlobeSection />
 

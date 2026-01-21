@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";
-import hero_bg from "@/app/(web)/assets/images/Hero.webp";
+// import hero_bg from "@/app/(web)/assets/images/Hero.webp";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
 const ServiceBanner = () => {
   const sectionRef = useRef(null);
@@ -67,11 +68,9 @@ const ServiceBanner = () => {
       ref={sectionRef}
       className="padd-y padd-x service-page-banner"
       style={{
-        backgroundImage: `url(${hero_bg.src})`,
+        backgroundImage: `url(${hero_bg_latest.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
       <div className="container-fluid">

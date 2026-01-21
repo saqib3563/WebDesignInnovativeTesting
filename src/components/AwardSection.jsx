@@ -5,8 +5,8 @@ import gsap from "gsap";
 import Image from "next/image";
 import { instrument_sans } from "@/app/(web)/assets/fonts/custom";
 import flagImg1 from "@/app/(web)/assets/images/flag-img-1.svg";
-import flagImg2 from "@/app/(web)/assets/images/flag-img-2.svg";
-import flagImg3 from "@/app/(web)/assets/images/flag-img-3.svg";
+import flagImg2 from "@/app/(web)/assets/images/flag-img-2.webp";
+import flagImg3 from "@/app/(web)/assets/images/flag-img-3.png";
 import flagImg4 from "@/app/(web)/assets/images/flag-img-4.svg";
 import flagImg5 from "@/app/(web)/assets/images/flag-img-5.svg";
 import cusImage1 from "@/app/(web)/assets/images/cus-1.webp";
@@ -100,13 +100,13 @@ const AwardSection = () => {
                     <li className="pres-logo">
                       <Image src={flagImg3} alt="3" fill />
 
-                      <h2>Pak</h2>
+                      <h2>CAN</h2>
                     </li>
 
                     <li className="pres-logo">
                       <Image src={flagImg2} alt="2" fill />
 
-                      <h2>KSA</h2>
+                      <h2>UAE</h2>
                     </li>
 
                     <li className="pres-logo">

@@ -3,6 +3,7 @@
 import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import serviceBg from "@/app/(web)/assets/images/service-bg.webp";
 import columnImag1 from "@/app/(web)/assets/images/col-image.webp";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 import diamondImage from "@/app/(web)/assets/images/diamond.webp";
 
 import Image from "next/image";
@@ -17,12 +18,12 @@ const ServiceSection = () => {
   const sectionRef = useRef(null);
   const diamondRef = useRef(null);
 
-//   const contentTexts = [
-//     "UI/UX Design",
-//     "Development",
-//     "Copy Writing",
-//     "Branding & Strategy",
-//   ];
+  //   const contentTexts = [
+  //     "UI/UX Design",
+  //     "Development",
+  //     "Copy Writing",
+  //     "Branding & Strategy",
+  //   ];
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +31,7 @@ const ServiceSection = () => {
 
     const ctx = gsap.context(
       AnimationService(diamondRef, sectionRef),
-      sectionRef
+      sectionRef,
     );
 
     return () => ctx.revert();
@@ -39,7 +40,11 @@ const ServiceSection = () => {
   return (
     <section
       ref={sectionRef}
-      style={{ backgroundImage: `url(${serviceBg.src})` }}
+      style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       className=" padd-x service-section position-relative"
     >
       <div className="container-fluid">
@@ -68,22 +73,36 @@ const ServiceSection = () => {
                 <span className="d-none d-xxl-inline">elopment</span>
               </Link>
               <span className="divide"></span>
-              <Link href="#" className="primary-font">App Development</Link>
+              <Link href="#" className="primary-font">
+                App Development
+              </Link>
             </div>
             <div className="service-link-area">
-              <Link href="#" className="text-end primary-font">E-Commerce </Link>
+              <Link href="#" className="text-end primary-font">
+                E-Commerce{" "}
+              </Link>
               <span className="divide"></span>
-              <Link href="#" className="primary-font">Video Animation</Link>
+              <Link href="#" className="primary-font">
+                Video Animation
+              </Link>
             </div>
             <div className="service-link-area">
-              <Link href="#" className="text-end primary-font">Web Maintenance</Link>
+              <Link href="#" className="text-end primary-font">
+                Web Maintenance
+              </Link>
               <span className="divide"></span>
-              <Link href="#" className="primary-font">Domain & Hosting</Link>
+              <Link href="#" className="primary-font">
+                Domain & Hosting
+              </Link>
             </div>
             <div className="service-link-area">
-              <Link href="#" className="text-end primary-font">Branding</Link>
+              <Link href="#" className="text-end primary-font">
+                Branding
+              </Link>
               <span className="divide"></span>
-              <Link href="#" className="primary-font">Digital Marketing</Link>
+              <Link href="#" className="primary-font">
+                Digital Marketing
+              </Link>
             </div>
           </div>
 

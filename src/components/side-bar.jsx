@@ -72,7 +72,7 @@ const SideBar = () => {
       <div className="side-bar" ref={sidebarRef}>
         {/* Header */}
         <div className="sidebar-header">
-          <Image src={logoImage} alt="logo" width={45} height={45} />
+          <Image src={logoImage} alt="logo" width={45} height={45} className="side-logo" />
           <button className="menu-btn" onClick={toggleMenu}>
             <Image src={iconMenu} alt="menu_icon" width={30} height={30} />
           </button>

@@ -33,6 +33,7 @@ import SQL from "@/app/(web)/assets/lottie/SQL.json";
 import Stellar from "@/app/(web)/assets/lottie/Stellar.json";
 import Swift from "@/app/(web)/assets/lottie/Swift.json";
 import xrp from "@/app/(web)/assets/lottie/xrp.json";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
 const TechnologiesSection = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -51,11 +52,18 @@ const TechnologiesSection = () => {
   }, [activeTab]);
 
   return (
-    <section className="tecno-sec">
+    <section
+      className="tecno-sec"
+      style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 className="primary-font mb-3 text-center">
+            <h2 className="primary-font mb-3 text-center text-black">
               Technologies
               <br />
               We Expert
@@ -196,11 +204,7 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie
-                        animationData={JS}
-                        loop={true}
-                        autoplay={true}
-                      />
+                      <Lottie animationData={JS} loop={true} autoplay={true} />
                       <h4>JavaScript</h4>
                     </div>
                   </li>
@@ -218,22 +222,14 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie
-                        animationData={SQL}
-                        loop={true}
-                        autoplay={true}
-                      />
+                      <Lottie animationData={SQL} loop={true} autoplay={true} />
                       <h4>SQL</h4>
                     </div>
                   </li>
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie
-                        animationData={CSS}
-                        loop={true}
-                        autoplay={true}
-                      />
+                      <Lottie animationData={CSS} loop={true} autoplay={true} />
                       <h4>CSS</h4>
                     </div>
                   </li>
@@ -267,7 +263,8 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie className="lottie-purple"
+                      <Lottie
+                        className="lottie-purple"
                         animationData={MongoDB}
                         loop={true}
                         autoplay={true}
@@ -338,11 +335,7 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie
-                        animationData={Php}
-                        loop={true}
-                        autoplay={true}
-                      />
+                      <Lottie animationData={Php} loop={true} autoplay={true} />
                       <h4>Php</h4>
                     </div>
                   </li>
@@ -360,7 +353,8 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie className="lottie-purple"
+                      <Lottie
+                        className="lottie-purple"
                         animationData={Node}
                         loop={true}
                         autoplay={true}
@@ -420,7 +414,8 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie className="lottie-purple"
+                      <Lottie
+                        className="lottie-purple"
                         animationData={Node}
                         loop={true}
                         autoplay={true}
@@ -431,11 +426,7 @@ const TechnologiesSection = () => {
                   <li>
                     {" "}
                     <div className="tablottie">
-                      <Lottie
-                        animationData={xrp}
-                        loop={true}
-                        autoplay={true}
-                      />
+                      <Lottie animationData={xrp} loop={true} autoplay={true} />
                       <h4>XRP</h4>
                     </div>
                   </li>

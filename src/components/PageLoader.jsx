@@ -91,7 +91,7 @@ const PageLoader = ({ onComplete }) => {
 
     // Text animation
     const text1 = "PRESTIGE";
-    const text2 = "IT CONSULTONT";
+    const text2 = "IT CONSULTANT";
     
     const chars1 = text1.split('').map((char, i) => 
       `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`
