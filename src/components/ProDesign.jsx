@@ -108,8 +108,8 @@ const ProDesignSection = () => {
                   </div>
                   <div className="card-custom-content">
                     <h3 className="primary-font mb-0 ">{item.title}</h3>
-                    <h6 className="card-paragraph">Increase Instagram engagement and drive traffic to website.</h6>
-                    {/* <FancyButton text="Read More"/> */}
+                    <h6 className="card-paragraph mb-4 text-white">Increase Instagram engagement and drive traffic to website.</h6>
+                    <FancyButton text="Read More"/>
                   </div>
                 </div>
               </div>

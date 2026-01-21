@@ -12,11 +12,14 @@
   --primary-bg-color: #0A0A0A;
   --mango-font: mango-font;
   --primary-color: #fff;
-  --accent-purple: #8B5CF6;
+  /* --accent-purple: #8B5CF6; */
+  --accent-purple: #92278f;
   --secondary-bg: #1A1A1A;
   --text-gray: #aaa;
   --inter-font: "Inter", sans-serif;
 }
+
+/* Our OLD GRADIENT COLOR background: linear-gradient(180deg, #7c3aed, #9333ea); */
 
 
 .primary-font {
@@ -54,7 +57,7 @@ body::-webkit-scrollbar {
 }
 
 .side-bar::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #7c3aed, #9333ea);
+  background: linear-gradient(#480068, #92278f);
   /* purple gradient */
   border-radius: 4px;
   border: 2px solid #0b0b0b;
@@ -84,7 +87,7 @@ p {
   width: 100%;
   height: 100%;
   min-height: 1080px;
-  padding: 200px 70px 20px;
+  padding: 300px 70px 20px;
   position: relative;
 }
 
@@ -121,11 +124,14 @@ header {
   position: fixed;
   width: 100%;
   left: 0;
-  top: 0;
-  top: 10px;
-  left: 0;
+  top: 0px;
   z-index: 2;
-  padding: 40px 70px;
+  padding: 0px 70px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  background: #ffffffc7;
 }
 
 .header-main {
@@ -135,8 +141,8 @@ header {
 }
 
 .logo {
-  height: 45px;
-  width: 80px;
+  height: 140px;
+  width: 140px;
   object-fit: contain;
 }
 
@@ -145,7 +151,7 @@ header {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #fff;
+  border: 2px solid #92278f;
   border-radius: 5px;
   padding: 10px 15px;
 }
@@ -564,7 +570,7 @@ section h2 {
 }
 
 .fancy-btn:hover {
-  background: linear-gradient(90deg, #6D11E4, #8B5CF6);
+  background: linear-gradient(#480068, #92278f);
 }
 
 .fancy-btn:hover .text {
@@ -587,7 +593,8 @@ section h2 {
 .text-wrapper .text {
   display: block;
   transition: transform 0.3s ease;
-  background: linear-gradient(#6d11e4, #8b5cf6);
+  /* background: linear-gradient(#6d11e4, #8b5cf6); */
+  background: linear-gradient(#480068, #92278f);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   transition: all .4s;
@@ -614,7 +621,8 @@ section h2 {
   position: relative;
   transition: transform 0.2s ease-out;
   color: #fff;
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-radius: 50%;
   place-items: center;
   width: 60px;
@@ -647,8 +655,10 @@ section h2 {
   overflow: hidden;
   height: auto;
   width: 100%;
-  max-width: 560px;
+  max-width: 515px;
   margin: 0 auto;
+  border: 3px solid #480068;
+  border-radius: 30px;
 }
 
 .circular_area {
@@ -868,7 +878,8 @@ section h2 {
   top: -20%;
   height: 600px;
   width: 600px;
-  background: linear-gradient(180deg, #6D11E4, #B91FD1);
+  /* background: linear-gradient(180deg, #6D11E4, #B91FD1); */
+  background: linear-gradient(#480068, #92278f);
   opacity: 0.30;
   border-radius: 50%;
   filter: blur(150px);
@@ -885,7 +896,8 @@ section h2 {
   bottom: -10%;
   height: 600px;
   width: 600px;
-  background: linear-gradient(180deg, #6D11E4, #B91FD1);
+  /* background: linear-gradient(180deg, #6D11E4, #B91FD1); */
+  background: linear-gradient(#480068, #92278f);
   opacity: 0.30;
   border-radius: 50%;
   filter: blur(150px);
@@ -936,7 +948,7 @@ section h2 {
   position: absolute;
   top: -10px;
   left: -10%;
-  background: linear-gradient(116.09deg, #6D11E4 16.66%, #A81BD5 94.42%);
+  background: linear-gradient(116.09deg, #480068 16.66%, #92278f 94.42%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 26px;
@@ -1360,7 +1372,7 @@ section h2 {
 .accordion-custom.active .accordion-custom-head i {
   transform: rotate(45deg);
   transition: 0.5s;
-  background: linear-gradient(116.09deg, #6D11E4 16.66%, #A81BD5 94.42%);
+  background: linear-gradient(116.09deg, #480068 16.66%, #92278f 94.42%);
 }
 
 /* HERO BANNER ENHANCEMENTS */
@@ -1583,7 +1595,7 @@ footer::before {
 
 .inp-border {
   position: relative;
-  background: linear-gradient(116.09deg, #6D11E4 16.66%, #A81BD5 94.42%);
+  background: linear-gradient(116.09deg, #480068 16.66%, #92278f 94.42%);
   padding: 2px;
   border-radius: 30px;
 }
@@ -1611,7 +1623,7 @@ footer::before {
 }
 
 .signup-btn {
-  background: linear-gradient(116.09deg, #6D11E4 16.66%, #A81BD5 94.42%);
+  background: linear-gradient(116.09deg, #480068 16.66%, #92278f 94.42%);
   padding: 8px 40px;
   border-radius: inherit;
   color: #fff;
@@ -1995,7 +2007,8 @@ button:hover~.cursor {
 
 .idea-pop {
   text-align: center;
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-radius: 100%;
   flex-direction: column;
   justify-content: center;
@@ -2104,7 +2117,8 @@ button:hover~.cursor {
 }
 
 .radio:checked+label {
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-color: var(--accent-purple);
 }
 
@@ -2120,7 +2134,8 @@ button:hover~.cursor {
 }
 
 .idea-submit-btn {
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   color: var(--primary-color);
   border: 1px solid #0000;
   width: 100%;
@@ -2268,7 +2283,8 @@ button:hover~.cursor {
 
 .previous-person {
   color: #fff;
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-radius: 50%;
   place-items: center;
   width: 35px;
@@ -2282,7 +2298,8 @@ button:hover~.cursor {
 
 .next-person {
   color: #fff;
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-radius: 50%;
   place-items: center;
   width: 35px;
@@ -2428,7 +2445,8 @@ button:hover~.cursor {
 .text-wrapper .text {
   display: block;
   transition: transform 0.3s ease;
-  background: linear-gradient(#6d11e4, #8b5cf6);
+  /* background: linear-gradient(#6d11e4, #8b5cf6); */
+  background: linear-gradient(#480068, #92278f);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   transition: all .4s;
@@ -2459,7 +2477,8 @@ button:hover~.cursor {
   /* subtle smooth movement */
 
   color: #fff;
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   border-radius: 50%;
   place-items: center;
   width: 60px;
@@ -2502,9 +2521,9 @@ button:hover~.cursor {
 }
 
 .animation-rot {
-
   -webkit-animation: rotate 5s normal linear infinite;
   animation: rotate 5s normal linear infinite;
+  filter: invert(20%) sepia(60%) saturate(3463%) hue-rotate(286deg) brightness(84%) contrast(88%);
 }
 
 
@@ -2646,7 +2665,8 @@ button:hover~.cursor {
 }
 
 .reveal-effect:before {
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   z-index: 1;
 }
 
@@ -2987,7 +3007,8 @@ button:hover~.cursor {
 }
 
 .project-wrap-3 {
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
 }
 
 .location-names ul li {
@@ -3107,8 +3128,8 @@ button:hover~.cursor {
 }
 
 .tab-conlist li .tablottie>div {
-    max-height: 70px;
-    margin-bottom: 15px;
+  max-height: 70px;
+  margin-bottom: 15px;
 }
 
 /* Stream Section Start */
@@ -3233,7 +3254,8 @@ button:hover~.cursor {
 
 .portfolio-item-wrapper .portfolio-card .portfolio-btn:hover,
 .card-custom-child .portfolio-btn:hover {
-  background: linear-gradient(#6d11e4, #a81bd5);
+  /* background: linear-gradient(#6d11e4, #a81bd5); */
+  background: linear-gradient(#480068, #92278f);
   color: var(--primary-color);
   transition: 0.5s;
 }
@@ -3276,6 +3298,7 @@ button:hover~.cursor {
   box-shadow: -4.961px 25.522px 68px 0px rgba(0, 0, 0, 0.75);
   border-radius: 0 0 30px 30px;
   padding: 40px 35px;
+  background: linear-gradient(#480068, #92278f);
 }
 
 .portfolio-card .portfolio-card-categories p {

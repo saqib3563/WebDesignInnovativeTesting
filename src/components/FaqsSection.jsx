@@ -195,16 +195,17 @@ const FaqSection = () => {
             <div className="scrolling-text">
               <div className="rail">
                 <h4 className="primary-font slide-font">
-                  WebDesignInnovators.COM
+                  {/* WebDesignInnovators.COM */}
+                  PrestigeItConsulting.COM
                 </h4>
                 <h4 className="primary-font slide-font">
-                  WebDesignInnovators.COM
+                  PrestigeItConsulting.COM
                 </h4>
                 <h4 className="primary-font slide-font">
-                  WebDesignInnovators.COM
+                  PrestigeItConsulting.COM
                 </h4>
                 <h4 className="primary-font slide-font">
-                  WebDesignInnovators.COM
+                  PrestigeItConsulting.COM
                 </h4>
               </div>
             </div>
