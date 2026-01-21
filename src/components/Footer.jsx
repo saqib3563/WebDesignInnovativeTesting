@@ -250,13 +250,13 @@ const Footer = () => {
                   <p
                     className={`footer-para-1 mb-3 ${instrument_sans.className}`}
                   >
-                    © {new Date().getFullYear()} – Web Design Innovators
+                    © {new Date().getFullYear()} – Prestige IT Consulting
                   </p>
                   <Link
-                    href="mailto:contact@webdesigninnovations.com"
+                    href="mailto:contact@prestigeitconsulting.com"
                     className="last-link primary-font"
                   >
-                    contact@webdesigninnovations.com
+                    contact@prestigeitconsulting.com
                   </Link>
                 </div>
               </div>

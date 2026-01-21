@@ -4,7 +4,8 @@ import { sideBarContext } from "@/app/context";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
-import logoImage from "@/app/(web)/assets/images/logo.avif";
+// import logoImage from "@/app/(web)/assets/images/logo.avif"
+import logoImage from "@/app/(web)/assets/images/logo-updated.png"
 import iconMenu from "@/app/(web)/assets/images/Icon.png";
 import { useRouter, usePathname } from "next/navigation";
 import FancyButton from "./FancyButton";

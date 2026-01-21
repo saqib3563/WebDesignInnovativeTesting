@@ -222,14 +222,14 @@ const HeroBanner = () => {
               ref={headingRef}
               className={`main_bnner_heading ${bebas_neu.className}`}
             >
-              WEB DESIGN
+              PRESTIGE
             </h1>
 
             <h2
               ref={innovatorRef}
               className={`innovator-text ${bebas_neu.className}`}
             >
-              INNOVATORS
+              IT CONSULTING
             </h2>
             
           </div>
