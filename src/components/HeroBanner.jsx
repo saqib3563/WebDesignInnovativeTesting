@@ -1,5 +1,6 @@
 "use client";
-import hero_bg from "@/app/(web)/assets/images/Hero.webp";
+// import hero_bg from "@/app/(web)/assets/images/Hero.webp";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 import bnner_img from "@/app/(web)/assets/images/robot-hand.webp";
 import GlobeImg from "@/app/(web)/assets/images/globe-hero.webp";
 
@@ -97,7 +98,7 @@ const HeroBanner = () => {
       tl.to(globeRefs.current, {
         rotation: 720,
         scale: 1.35,
-        duration: 1.8,
+        duration: 1.1,
         ease: "power4.inOut",
         stagger: 0.12
       });
@@ -110,7 +111,7 @@ const HeroBanner = () => {
         y: 0,
         rotation: 0,
         scale: 1,
-        duration: 1.8,
+        duration: 1.2,
         ease: "expo.inOut"
       });
 
@@ -124,7 +125,7 @@ const HeroBanner = () => {
         duration: 0.8,
         ease: "back.out(1.7)",
         stagger: 0.05
-      }, "+=0.2");
+      }, "-=0.3");
 
       /* =========================
          INNOVATORS - SPLIT TEXT ANIMATION
@@ -136,7 +137,7 @@ const HeroBanner = () => {
         duration: 0.8,
         ease: "back.out(1.7)",
         stagger: 0.03
-      }, "-=0.4");
+      }, "-=0.6");
 
       /* =========================
          HAND IMAGE
@@ -172,7 +173,7 @@ const HeroBanner = () => {
       ref={containerRef}
       className="hero_bnner"
       style={{
-        backgroundImage: `url(${hero_bg.src})`,
+        backgroundImage: `url(${hero_bg_latest.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",

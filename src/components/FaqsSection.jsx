@@ -5,7 +5,8 @@ import { FaqAnimation } from "@/utils/animations/faqs";
 import Image from "next/image";
 import web_box from "@/app/(web)/assets/images/innovation_box_2.png";
 import client_image_7 from "@/app/(web)/assets/images/client_image-7.png";
-import ScrollRevealHandler from "@/components/ScrollRevealHandler";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
+// import ScrollRevealHandler from "@/components/ScrollRevealHandler";
 import FancyButton from "./FancyButton";
 const FaqSection = () => {
   const [currentAccordion, setCurrentAccordion] = useState(0);
@@ -56,17 +57,23 @@ const FaqSection = () => {
     FaqAnimation();
   }, []);
   return (
-    <section className="faq-sec">
-      <ScrollRevealHandler />
+    <section className="faq-sec"
+          style={{
+            backgroundImage: `url(${hero_bg_latest.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+    >
+      {/* <ScrollRevealHandler /> */}
       <div className="container-fluid">
         <div className="row  padd-y padd-x row-gap-3 align-items-center">
           <div className="col-lg-5 col-12">
             <span
-              className={`${inter.className} abt-heading mb-3 d-block text-start`}
+              className={`${inter.className} abt-heading mb-3 d-block text-start text-black`}
             >
               [ Faqs ]
             </span>
-            <h2 className="primary-font reveal-text" data-aos="fade-right">
+            <h2 className="primary-font text-black" data-aos="fade-right">
               Got <br />
               Questions?
             </h2>
@@ -194,17 +201,17 @@ const FaqSection = () => {
           <div className="col-12 position-relative">
             <div className="scrolling-text">
               <div className="rail">
-                <h4 className="primary-font slide-font">
+                <h4 className="primary-font slide-font text-black">
                   {/* WebDesignInnovators.COM */}
                   PrestigeItConsulting.COM
                 </h4>
-                <h4 className="primary-font slide-font">
+                <h4 className="primary-font slide-font text-black">
                   PrestigeItConsulting.COM
                 </h4>
-                <h4 className="primary-font slide-font">
+                <h4 className="primary-font slide-font text-black">
                   PrestigeItConsulting.COM
                 </h4>
-                <h4 className="primary-font slide-font">
+                <h4 className="primary-font slide-font text-black">
                   PrestigeItConsulting.COM
                 </h4>
               </div>

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 // import logoImage from "@/app/(web)/assets/images/logo.avif"
-import logoImage from "@/app/(web)/assets/images/latest-logo.png"
+import logoImage from "@/app/(web)/assets/images/logo-updated.png"
 import iconMenu from "@/app/(web)/assets/images/Icon.png"
 import { useContext, useEffect } from "react"
 import gsap from "gsap"
@@ -28,8 +28,7 @@ const Header = () => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
       }
     });
-
-
+    
   }, [])
 
 
