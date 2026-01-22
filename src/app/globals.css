@@ -127,18 +127,23 @@ header {
   top: 0px;
   z-index: 2;
   padding: 0px 70px;
+    transition: 1s;
+}
+
+header.header-scrolled {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.2px);
   -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(255, 255, 255, 0.27);
   background: #ffffffc7;
+  transition: 1s;
 }
 
 .header-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
 .logo {
@@ -3576,6 +3581,31 @@ button:hover~.cursor {
   height: 100%;
 }
 
-.service-section span,.service-section p {
+.service-section span,
+.service-section p {
   color: var(--primary-bg-color) !important;
+}
+
+.scrolling-text-wrapper {
+    align-items: center;
+    width: 100%;
+    padding: 85px 0;
+    display: flex;
+    overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-text-wrapper h4 a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 75px;
+}
+
+.rail-track {
+  display: inline-flex;
+  width: max-content;
+}
+
+.rail-track h4 {
+  white-space: nowrap;
 }

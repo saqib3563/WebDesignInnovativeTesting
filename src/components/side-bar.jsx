@@ -14,10 +14,10 @@ const menuItems = [
   { label: "HOME", path: "/" },
   { label: "ABOUT US", path: "/about" },
   { label: "SERVICES", path: "/services" },
-  { label: "CONTACT US", path: "/contact-us" },
+  { label: "CAREERS", path: "/careers" },
+  { label: "WORK", path: "/work" },
   { label: "BLOGS", path: "/blogs" },
-  { label: "CASE STUDIES", path: "/case-studies" },
-  { label: "NEWS ROOM", path: "/news-room" },
+  { label: "CONTACT US", path: "/contact-us" },
 ];
 
 const SideBar = () => {

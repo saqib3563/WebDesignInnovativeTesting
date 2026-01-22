@@ -4,7 +4,7 @@ import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 // import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
-const ContactUsBanner = () => {
+const CareerBanner = () => {
   return (
     <section
       className="padd-y padd-x about-page-banner"
@@ -16,7 +16,7 @@ const ContactUsBanner = () => {
     >
       <div className="container-fluid">
         <div className="page-header_wrapper">
-          <h2 className="primary-font text-black">Contact us</h2>
+          <h2 className="primary-font text-black">Build Your career</h2>
           <div className="bread-crumb">
             <Link
               href="#"
@@ -32,16 +32,23 @@ const ContactUsBanner = () => {
             <span
               className={`${inter.className} para-section para-section-crumb`}
             >
-              Contact us
+              Careers
             </span>
           </div>
         </div>
         <div className="about-content-area">
-          <p className={`${instrument_sans.className} abt-para text-start text-black`}>
-            Got a project in mind? Wanna level up with top-tier web design
-            straight outta the Global-scale design industry? Whether it’s a
-            custom site, a dope eCommerce setup, or just some solid web
-            advice—PIC’s got your back.
+          <p
+            className={`${instrument_sans.className} abt-para text-start text-black`}
+          >
+            At Prestige IT Consulting, we don’t just deliver IT solutions. We
+            build long-term partnerships. Join our team of problem-solvers,
+            innovators, and experts driving change across identity, cloud,
+            security, and automation.
+          </p>
+          <p
+            className={`${instrument_sans.className} abt-para text-start text-black`}
+          >
+            Explore open roles and help shape the future of enterprise IT.
           </p>
         </div>
       </div>
@@ -49,4 +56,4 @@ const ContactUsBanner = () => {
   );
 };
 
-export default ContactUsBanner;
+export default CareerBanner;
