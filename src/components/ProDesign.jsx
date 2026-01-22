@@ -35,11 +35,12 @@ const ProDesignSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".pro-section",
-        start: "10% -30%",
-        end: "bottom+=110%",
+        start: "1% -30%",
+        end: "bottom+=90%",
         scrub: 1,
         pin: true,
         anticipatePin: 1,
+        markers: true
       },
     });
 

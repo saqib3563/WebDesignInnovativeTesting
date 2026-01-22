@@ -22,6 +22,24 @@ import logo11 from "@/app/(web)/assets/images/footer-logo-11.webp";
 import logo12 from "@/app/(web)/assets/images/footer-logo-12.webp";
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: "fa-facebook",
+      url: "https://www.facebook.com/prestige.it.consulting/",
+    },
+    {
+      name: "LinkedIn",
+      icon: "fa-linkedin",
+      url: "https://www.linkedin.com/company/prestige-it-consulting",
+    },
+    {
+      name: "Instagram",
+      icon: "fa-instagram",
+      url: "https://www.instagram.com/prestige.it.consulting/",
+    },
+  ];
+
   // --- Dynamic logos array ---
   const logos = [
     logo1,
@@ -253,35 +271,22 @@ const Footer = () => {
                     © {new Date().getFullYear()} – Prestige IT Consulting
                   </p>
                   <Link
-                    href="mailto:contact@prestigeitconsulting.com"
+                    href="mailto:contact@prestige-it.com"
                     className="last-link primary-font"
                   >
-                    contact@prestigeitconsulting.com
+                    contact@prestige-it.com
                   </Link>
                 </div>
               </div>
               <div className="col-md-4 order-1 order-md-0">
                 <ul className="footer-social-links">
-                  <li>
-                    <Link href="#">
-                      <i className="fa-brands fa-facebook"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#">
-                      <i className="fa-brands fa-x-twitter"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#">
-                      <i className="fa-brands fa-instagram"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#">
-                      <i className="fa-brands fa-linkedin"></i>
-                    </Link>
-                  </li>
+                  {socialLinks.map((item, index) => (
+                    <li key={index}>
+                      <Link href={item.url} target="_blank">
+                        <i className={`fa-brands ${item.icon}`}></i>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="mb-4 col-md-4 mb-md-0">

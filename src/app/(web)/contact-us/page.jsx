@@ -1,7 +1,6 @@
 import ContactSection from "@/components/ContactSection";
 import ContactUsBanner from "@/components/ContactUsBanner";
-import FaqSection from "@/components/FaqsSection";
-import GlobeSection from "@/components/GlobeSection";
+import LocationSection from "@/components/LocationSection";
 import React from "react";
 
 const page = () => {
@@ -11,11 +10,8 @@ const page = () => {
 
       <ContactSection />
 
-      {/* Globe Section */}
-      <GlobeSection />
+      <LocationSection />
 
-      {/* Faq Section */}
-      <FaqSection />
     </>
   );
 };

@@ -47,7 +47,7 @@ const AboutUsBanner = () => {
     >
       <div className="container-fluid">
         <div className="page-header_wrapper">
-          <h2 className="primary-font text-black">About Us</h2>
+          <h2 className="primary-font text-black" data-aos="fade-up">About Us</h2>
           <div className="bread-crumb">
             <Link
               href="#"
@@ -68,18 +68,18 @@ const AboutUsBanner = () => {
           </div>
         </div>
         <div className="about-content-area text-black">
-          <h3 className={`${inter.className} abt-heading mb-5 text-start text-black`}>
+          <h3 className={`${inter.className} abt-heading mb-5 text-start text-black`} data-aos="fade-up">
             [ who we are ]
           </h3>
 
-          <p className={`${instrument_sans.className} abt-para text-start text-black`}>
+          <p className={`${instrument_sans.className} abt-para text-start text-black`} data-aos="fade-up">
             From concept to execution, we build impactful <br /> digital
             solutions that resonate with real <br /> people and deliver results
           </p>
         </div>
         <div className="about-counter-area text-black">
           <p
-            className={`para-section para-section-2 mt-0 text-black ${instrument_sans.className}`}
+            className={`para-section para-section-2 mt-0 text-black ${instrument_sans.className}`} data-aos="fade-up"
           >
             With expertise in areas such as web design, digital marketing,{" "}
             <br />
