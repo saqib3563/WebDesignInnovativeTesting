@@ -1,5 +1,4 @@
-import ContactSection from "@/components/ContactSection";
-import ContactUsBanner from "@/components/ContactUsBanner";
+import CareersBanner from "@/components/CareersBanner";
 import FaqSection from "@/components/FaqsSection";
 import GlobeSection from "@/components/GlobeSection";
 import React from "react";
@@ -7,9 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <ContactUsBanner />
-
-      <ContactSection />
+      <CareersBanner />
 
       {/* Globe Section */}
       <GlobeSection />

@@ -16,6 +16,8 @@ import { AnimationAboutUs } from "@/utils/animations/about-us";
 import SwiperComponent from "./slider";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
+import { useGSAP } from "@/hooks/useGSAP";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,7 +27,7 @@ import "swiper/css/autoplay";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Store original text content before animation
@@ -64,9 +66,9 @@ const AboutUs = () => {
       style={{ backgroundImage: `url(${backgroundImg.src})` }}
     >
       <div className="padd-x">
-        <h3 className={`${inter.className} abt-heading mb-5`}>[ About us ]</h3>
+        <h3 className={`${inter.className} abt-heading mb-5`} data-aos="fade-up">[ About us ]</h3>
 
-        <p className={`${instrument_sans.className} abt-para `}>
+        <p className={`${instrument_sans.className} abt-para `} data-aos="fade-right">
           At Prestige IT Consulting, we don’t just build digital products <br /> —we
           engineer intelligent, AI-driven business solutions. From enterprise IT
           to web, app, and eCommerce experiences, we transform ideas into
