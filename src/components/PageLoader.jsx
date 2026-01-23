@@ -199,14 +199,14 @@ const PageLoader = ({ onComplete }) => {
 
       <div
         ref={textRef}
-        className="page-loader-text"
+        className="page-loader-text primary-font"
         style={{
           fontSize: "clamp(3rem, 8vw, 6rem)",
           fontWeight: 900,
           color: "#fff",
           textAlign: "center",
           lineHeight: 0.9,
-          fontFamily: "system-ui, sans-serif",
+          // fontFamily: "system-ui, sans-serif",
           perspective: "1000px",
           zIndex: 1
         }}

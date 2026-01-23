@@ -16,7 +16,7 @@ const ContactUsBanner = () => {
     >
       <div className="container-fluid">
         <div className="page-header_wrapper">
-          <h2 className="primary-font text-black">Contact us</h2>
+          <h2 className="primary-font text-black" data-aos="fade-up">Contact us</h2>
           <div className="bread-crumb">
             <Link
               href="#"
@@ -36,7 +36,7 @@ const ContactUsBanner = () => {
             </span>
           </div>
         </div>
-        <div className="about-content-area">
+        <div className="about-content-area" data-aos="fade-up">
           <p className={`${instrument_sans.className} abt-para text-start text-black`}>
             Got a project in mind? Wanna level up with top-tier web design
             straight outta the Global-scale design industry? Whether it’s a

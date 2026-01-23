@@ -11,7 +11,7 @@ const LocationSection = () => {
       <div className="container-fluid">
         <div className="row justify-content-between">
           <div className="col-md-6">
-            <h2 className="primary-font">Locations</h2>
+            <h2 className="primary-font" data-aos="fade-up">Locations</h2>
             <p className="loc-para">
               <i className="fa-solid me-2 fa-location-dot"></i>
               <span>Address:</span>

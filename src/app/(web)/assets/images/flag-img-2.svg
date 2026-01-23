@@ -1,0 +1,25 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle mask -->
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="150" cy="150" r="150"></circle>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Background -->
+    <rect width="300" height="300" fill="#FFFFFF"></rect>
+
+    <!-- Red vertical bar -->
+    <rect x="0" y="0" width="75" height="300" fill="#FF0000"></rect>
+
+    <!-- Green stripe -->
+    <rect x="75" y="0" width="225" height="100" fill="#00732F"></rect>
+
+    <!-- White stripe -->
+    <rect x="75" y="100" width="225" height="100" fill="#FFFFFF"></rect>
+
+    <!-- Black stripe -->
+    <rect x="75" y="200" width="225" height="100" fill="#000000"></rect>
+  </g>
+</svg>

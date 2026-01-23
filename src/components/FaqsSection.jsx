@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaqAnimation } from "@/utils/animations/faqs";
 import Image from "next/image";
 import web_box from "@/app/(web)/assets/images/innovation_box_2.png";
-import client_image_7 from "@/app/(web)/assets/images/client_image-7.png";
+// import client_image_7 from "@/app/(web)/assets/images/client_image-7.png";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 // import ScrollRevealHandler from "@/components/ScrollRevealHandler";
 import FancyButton from "./FancyButton";
@@ -57,19 +57,20 @@ const FaqSection = () => {
     FaqAnimation();
   }, []);
   return (
-    <section className="faq-sec"
-          style={{
-            backgroundImage: `url(${hero_bg_latest.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}
+    <section
+      className="faq-sec"
+      style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       {/* <ScrollRevealHandler /> */}
       <div className="container-fluid">
         <div className="row  padd-y padd-x row-gap-3 align-items-center">
           <div className="col-lg-5 col-12">
             <span
-              className={`${inter.className} abt-heading mb-3 d-block text-start text-black`}
+              className={`${inter.className} abt-heading mb-3 d-block text-start text-black reveal-text`}
             >
               [ Faqs ]
             </span>
@@ -87,7 +88,7 @@ const FaqSection = () => {
                   Tell details about your project
                 </h2>
                 <form action="#">
-                  <div className="wrp">
+                  {/* <div className="wrp">
                     <input
                       type="text"
                       name=""
@@ -95,61 +96,88 @@ const FaqSection = () => {
                       placeholder="Full name"
                       className="text-inp"
                     />
+                  </div> */}
+                  <div className="wave-group">
+                    <input
+                      type="text"
+                      name="fullname"
+                      required
+                      className="input"
+                    />
+                    <span className="bar"></span>
+                    <label className="label">
+                      {"FullName".split("").map((char, i) => (
+                        <span
+                          key={i}
+                          className="label-char"
+                          style={{ "--index": i }}
+                        >
+                          {char}
+                        </span>
+                      ))}
+                    </label>
                   </div>
-                  <div className="wrp">
+                  <div className="wave-group">
                     <input
                       type="email"
-                      name=""
-                      id=""
-                      placeholder="Your email"
-                      className="text-inp"
+                      name="email"
+                      required
+                      className="input"
                     />
+                    <span className="bar"></span>
+                    <label className="label">
+                      {"Your Email".split("").map((char, i) => (
+                        <span
+                          key={i}
+                          className="label-char"
+                          style={{ "--index": i }}
+                        >
+                          {char}
+                        </span>
+                      ))}
+                    </label>
                   </div>
-                  <div className="wrp">
+                  <div className="wave-group">
                     <input
                       type="tel"
-                      name=""
-                      id=""
-                      placeholder="Your Phone"
-                      className="text-inp"
+                      name="phone"
+                      required
+                      className="input"
                     />
+                    <span className="bar"></span>
+                    <label className="label">
+                      {"Your Phone".split("").map((char, i) => (
+                        <span
+                          key={i}
+                          className="label-char"
+                          style={{ "--index": i }}
+                        >
+                          {char}
+                        </span>
+                      ))}
+                    </label>
                   </div>
-                  <div className="wrp">
-                    <textarea
-                      name=""
-                      id=""
-                      placeholder="Your Message"
-                      className="text-inp"
-                    ></textarea>
-                  </div>
-                  {/* <div className="form-check">
-                  <input type="checkbox" name="subs" className="check-inp" />
-                  <label htmlFor="subs" className="check-label">
-                    Subscribe to Newsletter
-                  </label>
-                </div> */}
-                  <div className="author-area">
-                    {/* <div className="author">
-                    <Image
-                      src={client_image_7}
-                      alt=""
-                      className="img-fluid"
-                      loading="lazy"
+                  <div className="wave-group">
+                    <input
+                      type="text"
+                      name="message"
+                      required
+                      className="input input-large"
                     />
-                    <div>
-                      <h6>Liven Geo</h6>
-                      <p>Support Developer</p>
-                    </div>
-                  </div> */}
-                    {/* <button
-                    className={`btn-main ${instrument_sans.className}`}
-                    data-aos="zoom-in"
-                  >
-                    <span className="text">Submit now</span>
-                    <span>
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </span>
-                  </button> */}
+                    <span className="bar"></span>
+                    <label className="label">
+                      {"Your Message".split("").map((char, i) => (
+                        <span
+                          key={i}
+                          className="label-char"
+                          style={{ "--index": i }}
+                        >
+                          {char}
+                        </span>
+                      ))}
+                    </label>
+                  </div>
+                  <div className="text-center">
                     <FancyButton data-aos="zoom-in" text="Submit now" />
                   </div>
                 </form>

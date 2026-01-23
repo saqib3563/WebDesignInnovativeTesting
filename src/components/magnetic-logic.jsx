@@ -20,37 +20,95 @@ const MagneticButton = () => {
       btn.style.opacity = "1";
     }, 5000);
 
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
 
-      if (scrollY > 100) {
-        // Scroll down → zoom out
-        btn.style.transform = "scale(0.8)";
-        btn.style.opacity = "0";
-      } else {
-        // Scroll up → zoom in
-        btn.style.transform = "scale(1)";
-        btn.style.opacity = "1";
-      }
-    };
+  //     if (scrollY > 100) {
+  //       btn.style.transform = "scale(0.8)";
+  //       btn.style.opacity = "0";
+  //     } else {
+  //       btn.style.transform = "scale(1)";
+  //       btn.style.opacity = "1";
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+   },
+   []);
 
   return (
     <>
       {/* Magnetic Button */}
-      <a ref={btnRef} onClick={() => setSidebarOpen(true)} className="idea-pop">
+      {/* <a ref={btnRef} onClick={() => setSidebarOpen(true)} className="idea-pop">
         <i className="fa-solid fa-arrow-right-long"></i>
         <span className="idea-para">
           Drop Us A <br /> Line
         </span>
-      </a>
+      </a> */}
+
+
+<button className="idea-btn" ref={btnRef} onClick={() => setSidebarOpen(true)}>
+  <p className="idea-btn__text">
+    <span style={{ "--index": 0 }}>D</span>
+    <span style={{ "--index": 1 }}>R</span>
+    <span style={{ "--index": 2 }}>O</span>
+    <span style={{ "--index": 3 }}>P</span>
+    <span style={{ "--index": 4 }}> </span>
+    <span style={{ "--index": 5 }}>U</span>
+    <span style={{ "--index": 6 }}>s</span>
+    <span style={{ "--index": 7 }}> </span>
+    <span style={{ "--index": 8 }}>A</span>
+    <span style={{ "--index": 9 }}> </span>
+    <span style={{ "--index": 10 }}>L</span>
+    <span style={{ "--index": 11 }}>I</span>
+    <span style={{ "--index": 12 }}>N</span>
+    <span style={{ "--index": 13 }}>E</span>
+
+  </p>
+
+  <div className="idea-btn__circle">
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="idea-btn__icon"
+      width="14"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      width="14"
+      xmlns="http://www.w3.org/2000/svg"
+      className="idea-btn__icon idea-btn__icon--copy"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </div>
+</button>
+
+
+
+
+
+
+
+
+
+
 
       {/* Overlay */}
       <div

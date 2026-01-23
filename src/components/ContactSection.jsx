@@ -10,7 +10,7 @@ const ContactSection = () => {
     <ScrollRevealHandler/>
       <div className="container">
         <h2 className="primary-font mb-3 text-center reveal-text">Hit Us Up – Let’s Build Something Great</h2>
-        <p className="cont-desc text-center mb-5">Fill out this form to connect with our expert team. Prestige IT Consultant delivers customized solutions <br /> and resolves your queries efficiently.</p>
+        <p className="cont-desc text-center mb-5">Fill out this form to connect with our expert team. <br /> Prestige IT Consultant delivers customized solutions and resolves your queries efficiently.</p>
         <div className="row justify-content-center">
             <div className="col-md-10">
                 <form action="">
