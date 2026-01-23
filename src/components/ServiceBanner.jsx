@@ -66,7 +66,7 @@ const ServiceBanner = () => {
   return (
     <section
       ref={sectionRef}
-      className="padd-y padd-x service-page-banner"
+      className=" padd-x service-page-banner"
       style={{
         backgroundImage: `url(${hero_bg_latest.src})`,
         backgroundSize: "cover",
@@ -78,11 +78,11 @@ const ServiceBanner = () => {
           <div className="col-12">
             <div className="hero-title">
               <h1 ref={h1Ref}>
-                <div ref={firstTextRef} className="hero-title-one">
+                <div ref={firstTextRef} className="hero-title-one primary-font">
                   Services
                 </div>
                 <div className="her-title-two-main">
-                  <div ref={secondTextRef} className="hero-title-one">
+                  <div ref={secondTextRef} className="hero-title-one primary-font">
                     Solutions
                   </div>
                 </div>

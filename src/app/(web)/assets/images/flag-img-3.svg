@@ -1,0 +1,32 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle mask -->
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="150" cy="150" r="150"></circle>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Left red -->
+    <rect x="0" y="0" width="75" height="300" fill="#FF0000"></rect>
+
+    <!-- Center white -->
+    <rect x="75" y="0" width="150" height="300" fill="#FFFFFF"></rect>
+
+    <!-- Right red -->
+    <rect x="225" y="0" width="75" height="300" fill="#FF0000"></rect>
+
+    <!-- Maple leaf (simplified, SVG-friendly) -->
+    <polygon fill="#FF0000" transform="translate(150 150) scale(1.2)" points="
+      0,-60
+      10,-35 35,-45 25,-20
+      55,-10 25,0
+      35,25 10,20
+      0,55
+      -10,20 -35,25
+      -25,0 -55,-10
+      -25,-20 -35,-45
+      -10,-35
+      "></polygon>
+  </g>
+</svg>

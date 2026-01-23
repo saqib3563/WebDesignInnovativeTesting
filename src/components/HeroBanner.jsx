@@ -221,14 +221,16 @@ const HeroBanner = () => {
             {/* 🧠 TEXT */}
             <h1
               ref={headingRef}
-              className={`main_bnner_heading ${bebas_neu.className}`}
+              // className={`main_bnner_heading ${bebas_neu.className}`}
+              className={`main_bnner_heading primary-font`}
             >
               PRESTIGE
             </h1>
 
             <h2
               ref={innovatorRef}
-              className={`innovator-text ${bebas_neu.className}`}
+              // className={`innovator-text ${bebas_neu.className}`}
+              className={`innovator-text primary-font`}
             >
               IT CONSULTING
             </h2>

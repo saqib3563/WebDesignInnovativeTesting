@@ -8,7 +8,7 @@ export default function ScrollRevealHandler() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const elements = document.querySelectorAll(".reveal-text");
+    const elements = document.querySelectorAll(".reveal-text, .reveal-text-black");
 
     elements.forEach((el) => {
       // initial state (fully hidden)

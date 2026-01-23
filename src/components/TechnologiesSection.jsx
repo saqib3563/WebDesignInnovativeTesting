@@ -34,11 +34,13 @@ import Stellar from "@/app/(web)/assets/lottie/Stellar.json";
 import Swift from "@/app/(web)/assets/lottie/Swift.json";
 import xrp from "@/app/(web)/assets/lottie/xrp.json";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
+import ScrollRevealHandler from "./ScrollRevealHandler";
+import { useGSAP } from "@/hooks/useGSAP";
 
 const TechnologiesSection = () => {
   const [activeTab, setActiveTab] = useState(1);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.fromTo(
       ".tab-conlist ul",
       { opacity: 0, y: 12 },
@@ -60,6 +62,7 @@ const TechnologiesSection = () => {
         backgroundPosition: "center",
       }}
     >
+      <ScrollRevealHandler />
       <div className="container">
         <div className="row">
           <div className="col-12">
