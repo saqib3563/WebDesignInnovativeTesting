@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useRef, useState } from "react";
 import ScrollRevealHandler from "./ScrollRevealHandler";
@@ -29,7 +29,6 @@ const ApproachSection = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12" style={{ position: "relative" }}>
-            {/* VIDEO */}
             <video
               ref={videoRef}
               src="/approach-video.webm"
@@ -40,25 +39,12 @@ const ApproachSection = () => {
               loop
               style={{ width: "100%", display: "block" }}
             ></video>
-
-            {/* CUSTOM MUTE / UNMUTE BUTTON */}
-            <button
-              onClick={toggleMute}
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                right: "20px",
-                padding: "10px 15px",
-                background: "rgba(0,0,0,0.5)",
-                color: "#fff",
-                border: "none",
-                borderRadius: "50%",
-                cursor: "pointer",
-                zIndex: 10,
-                fontSize: "18px",
-              }}
-            >
-              {isMuted ? "🔇" : "🔊"}
+            <button className="video-mute-btn" onClick={toggleMute}>
+              {isMuted ? (
+                <i className="fa-solid fa-volume-xmark"></i>
+              ) : (
+                <i className="fa-solid fa-volume-high"></i>
+              )}
             </button>
           </div>
         </div>

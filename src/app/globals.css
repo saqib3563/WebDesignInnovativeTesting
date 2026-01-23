@@ -3524,11 +3524,11 @@ button:hover~.cursor {
 }
 
 .approach-sec video {
-    width: 100%;
-    aspect-ratio: 16/7;
-    object-fit: cover;
-    border-radius: 3rem;
-    box-shadow: 1px 1px 25px 1px #535353db;
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  border-radius: 3rem;
+  box-shadow: 1px 1px 25px 1px #535353db;
 
 }
 
@@ -3729,6 +3729,14 @@ button:hover~.cursor {
   position: relative;
 }
 
+/* .panel-ser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+} */
+
 .c-panel-1 {
   color: var(--primary-color);
   background-image: url("./(web)/assets/images/Hero-purple.png");
@@ -3821,4 +3829,19 @@ button:hover~.cursor {
 
 .c-panel-3 img {
   box-shadow: 4px 4px 12px 12px rgba(255, 255, 255, 0.08) !important;
+}
+
+
+
+.video-mute-btn {
+    color: #fff;
+    z-index: 10;
+    background: linear-gradient(#480068, #92278f);
+    border: none;
+    border-radius: 50%;
+    padding: 15px 20px;
+    font-size: 23px;
+    position: absolute;
+    bottom: 13px;
+    right: 26px;
 }

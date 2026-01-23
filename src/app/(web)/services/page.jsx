@@ -14,8 +14,8 @@ const page = () => {
       <ServiceRailSection/>
 
       <ApproachSection />
+      
       <OurServices/>
-
 
       <GlobeSection />
 

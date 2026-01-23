@@ -77,7 +77,7 @@ useGSAP(() => {
   return (
     <>
     <section
-      className="padd-y padd-x about-page-banner"
+      className="padd-y padd-x about-page-banner" ref={containerRef}
       style={{
         backgroundImage: `url(${hero_bg.src})`,
         backgroundSize: "cover",
@@ -108,7 +108,7 @@ useGSAP(() => {
         </div>
       </div>
     </section>
-    <div className="vertical-panel">
+    <div className="vertical-panel" >
       <div className="panel-ser c-panel-1">
         <div className="c-panel-left">
           <div className="c-panel-num">

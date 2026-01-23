@@ -9,6 +9,13 @@ import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 // import ScrollRevealHandler from "@/components/ScrollRevealHandler";
 import FancyButton from "./FancyButton";
 const FaqSection = () => {
+  const renderLabel = (text) =>
+    text.split("").map((char, i) => (
+      <span key={i} className="label-char" style={{ "--index": i }}>
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ));
+
   const [currentAccordion, setCurrentAccordion] = useState(0);
   const faqs = [
     {
@@ -105,18 +112,9 @@ const FaqSection = () => {
                       className="input"
                     />
                     <span className="bar"></span>
-                    <label className="label">
-                      {"FullName".split("").map((char, i) => (
-                        <span
-                          key={i}
-                          className="label-char"
-                          style={{ "--index": i }}
-                        >
-                          {char}
-                        </span>
-                      ))}
-                    </label>
+                    <label className="label">{renderLabel("Full Name")}</label>
                   </div>
+
                   <div className="wave-group">
                     <input
                       type="email"
@@ -125,38 +123,15 @@ const FaqSection = () => {
                       className="input"
                     />
                     <span className="bar"></span>
-                    <label className="label">
-                      {"Your Email".split("").map((char, i) => (
-                        <span
-                          key={i}
-                          className="label-char"
-                          style={{ "--index": i }}
-                        >
-                          {char}
-                        </span>
-                      ))}
-                    </label>
+                    <label className="label">{renderLabel("Your Email")}</label>
                   </div>
+
                   <div className="wave-group">
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      className="input"
-                    />
+                    <input type="tel" name="phone" required className="input" />
                     <span className="bar"></span>
-                    <label className="label">
-                      {"Your Phone".split("").map((char, i) => (
-                        <span
-                          key={i}
-                          className="label-char"
-                          style={{ "--index": i }}
-                        >
-                          {char}
-                        </span>
-                      ))}
-                    </label>
+                    <label className="label">{renderLabel("Your Phone")}</label>
                   </div>
+
                   <div className="wave-group">
                     <input
                       type="text"
@@ -166,17 +141,10 @@ const FaqSection = () => {
                     />
                     <span className="bar"></span>
                     <label className="label">
-                      {"Your Message".split("").map((char, i) => (
-                        <span
-                          key={i}
-                          className="label-char"
-                          style={{ "--index": i }}
-                        >
-                          {char}
-                        </span>
-                      ))}
+                      {renderLabel("Your Message")}
                     </label>
                   </div>
+
                   <div className="text-center">
                     <FancyButton data-aos="zoom-in" text="Submit now" />
                   </div>
