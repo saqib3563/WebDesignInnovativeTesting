@@ -6,6 +6,7 @@ import blogImg3 from "@/app/(web)/assets/images/blog-image-3.webp";
 import blogImg4 from "@/app/(web)/assets/images/blog-image-4.webp";
 import blogImg5 from "@/app/(web)/assets/images/blog-image-5.webp";
 import blogImg6 from "@/app/(web)/assets/images/blog-image-6.webp";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";
 import Image from "next/image";
@@ -85,7 +86,13 @@ const Blogs = () => {
   }, [], ".blogs");
 
   return (
-    <section className="padd-y padd-x blogs">
+    <section className="padd-y padd-x blogs"
+          style={{
+            backgroundImage: `url(${hero_bg_latest.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
       <ScrollRevealHandler />
       <div className="container-fluid">
         {/* HEADING AREA */}

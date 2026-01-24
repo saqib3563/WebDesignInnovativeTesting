@@ -3,10 +3,17 @@ import Link from "next/link";
 // import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import FancyButton from "./FancyButton";
 import ScrollRevealHandler from "./ScrollRevealHandler";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
 
 const ContactSection = () => {
   return (
-    <section className="padd-y padd-x Contact-sec">
+    <section className="padd-y padd-x Contact-sec"
+          style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
     <ScrollRevealHandler/>
       <div className="container">
         <h2 className="primary-font mb-3 text-center reveal-text">Hit Us Up – Let’s Build Something Great</h2>

@@ -1,5 +1,8 @@
 "use client";
 import { instrument_sans } from "@/app/(web)/assets/fonts/custom";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
+
+import ScrollRevealHandler from "@/components/ScrollRevealHandler";
 
 const terminalData = [
   {
@@ -31,11 +34,20 @@ const terminalData = [
 
 const CareerSection = () => {
   return (
-    <section className="padd-y padd-x career-sec">
-      <div className="container-fluid">
-        <h2 className="primary-font mb-3 text-center">
+    <section className="padd-y padd-x career-sec"
+          style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
+        <ScrollRevealHandler /> 
+      <div className="container-fluid ">
+        <div className="text-center">
+                  <h2 className="primary-font mb-3 text-center reveal-text mx-auto" > 
           Your Next Role Starts Here
         </h2>
+        </div>
 
         <div className="row mt-5">
           {terminalData.map((terminal, index) => (
