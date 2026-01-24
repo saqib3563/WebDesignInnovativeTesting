@@ -4,34 +4,50 @@ import { instrument_sans } from "@/app/(web)/assets/fonts/custom";
 import Image from "next/image";
 import revImg1 from "@/app/(web)/assets/images/blog-1.webp";
 import revImg2 from "@/app/(web)/assets/images/blog-3.webp";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";
 
 const MissionSection = () => {
-  useGSAP(() => {
-    const items = document.querySelectorAll(".reveal-effect");
+  useGSAP(
+    () => {
+      const items = document.querySelectorAll(".reveal-effect");
 
-    items.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { "--reveal-y": "0%" },
-        {
-          "--reveal-y": "100%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            end: "top 30%",
-            scrub: 1,
+      items.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { "--reveal-y": "0%" },
+          {
+            "--reveal-y": "100%",
+            ease: "none",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              end: "top 30%",
+              scrub: 1,
+            },
           },
-        }
-      );
-    });
-  }, [], ".reveal-effect");
+        );
+      });
+    },
+    [],
+    ".reveal-effect",
+  );
 
   return (
     <>
-      <section className="mission-sec">
+    <section       style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
+
+    
+      <section
+        className="mission-sec"
+
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -49,8 +65,8 @@ const MissionSection = () => {
               <p
                 className={`para-section para-section-2 ${instrument_sans.className}`}
               >
-                BYTRIX Technologies incorporates progressive digital <br /> 
-                solutions and resources to equip tech-savvy businesses <br /> 
+                BYTRIX Technologies incorporates progressive digital <br />
+                solutions and resources to equip tech-savvy businesses <br />
                 with advanced products and services. We have put <br /> forward
                 cutting-edge technology to revolutionize <br /> businesses and
                 business processes on an international level.
@@ -112,6 +128,7 @@ const MissionSection = () => {
           </div>
         </div>
         <div className="vip-overlay"></div>
+      </section>
       </section>
     </>
   );

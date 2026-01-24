@@ -21,6 +21,8 @@ import awardLogo4 from "@/app/(web)/assets/images/awardlogo4.webp";
 import awardLogo5 from "@/app/(web)/assets/images/awardlogo5.webp";
 import awardLogo6 from "@/app/(web)/assets/images/awardlogo6.webp";
 import awardLogo7 from "@/app/(web)/assets/images/awardlogo7.webp";
+import hero_bg from "@/app/(web)/assets/images/Hero.webp";
+import hero_bg_purple from "@/app/(web)/assets/images/Hero-purple.png";
 
 const AwardSection = () => {
   useGSAP(() => {
@@ -75,7 +77,13 @@ const AwardSection = () => {
     <section id="portfolio">
       <div className="horiz-gallery-wrapper">
         <div className="horiz-gallery-strip">
-          <div className="project-wrap project-wrap-3">
+          <div className="project-wrap project-wrap-3"
+                  style={{
+                    backgroundImage: `url(${hero_bg_purple.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                  }}>
             <div className="container-fluid">
               <div className="row position-relative">
                 <div className="col-12">
@@ -126,7 +134,13 @@ const AwardSection = () => {
             </div>
           </div>
 
-          <div className="project-wrap">
+          <div className="project-wrap"
+                            style={{
+                    backgroundImage: `url(${hero_bg.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                  }}>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
@@ -297,7 +311,13 @@ const AwardSection = () => {
             </div>
           </div>
 
-          <div className="project-wrap project-wrap-3">
+          <div className="project-wrap project-wrap-3"
+                            style={{
+                    backgroundImage: `url(${hero_bg_purple.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                  }}>
             <div className="container-fluid">
               <div className="row position-relative">
                 <div className="col-12">

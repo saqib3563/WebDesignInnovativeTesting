@@ -52,12 +52,12 @@ const ServiceSection = () => {
         <div className="row mb-5">
           <div className="col-12">
             <span
-              className={`${inter.className} abt-heading d-block text-start`}
+              className={`${inter.className} abt-heading d-block text-start text-black`}
             >
               [ Service ]
             </span>
             <p
-              className={`para-section para-section-2 mt-4 ${instrument_sans.className}`}
+              className={`para-section para-section-2 mt-4  text-black ${instrument_sans.className}`}
             >
               Transforming insights into direction helping brands <br />
               define goals, positioning, and creative pathways that <br />

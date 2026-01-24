@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 750) {
+      if (window.scrollY > 350) {
         setScrolled(true);
       } else {
         setScrolled(false);

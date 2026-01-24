@@ -1,13 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
 // import Link from "next/link";
 // import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 
 const LocationSection = () => {
   return (
-    <section className="location-sec padd-x">
+    <section className="location-sec padd-x"
+          style={{
+        backgroundImage: `url(${hero_bg_latest.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
       <div className="container-fluid">
         <div className="row justify-content-between">
           <div className="col-md-6">
