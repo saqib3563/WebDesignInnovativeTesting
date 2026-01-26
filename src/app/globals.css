@@ -606,6 +606,7 @@ section h2 {
   display: flex;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .fancy-btn:hover {
@@ -4026,4 +4027,17 @@ button:hover~.cursor {
 
 .custom-lightbox-close:hover {
   transform: scale(1.2);
+}
+
+/* Main Service Page  */
+
+.main-service-banner {
+  height: 100vh;
+}
+
+.main-service-banner .bnr-wrp  {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }

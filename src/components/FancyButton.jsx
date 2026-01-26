@@ -1,9 +1,13 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
 import { instrument_sans } from "@/app/(web)/assets/fonts/custom";
 
-export default function FancyButton({ text = "Contact Us" }) {
+export default function FancyButton({
+  text = "Contact Us",
+  href = "#",
+}) {
   const btnRef = useRef(null);
   const iconWrapperRef = useRef(null);
   const targetPos = useRef({ x: 0, y: 0 });
@@ -53,7 +57,11 @@ export default function FancyButton({ text = "Contact Us" }) {
   }, []);
 
   return (
-    <button ref={btnRef} className={`fancy-btn ${instrument_sans.className}`}>
+    <Link
+      href={href} 
+      ref={btnRef}
+      className={`fancy-btn ${instrument_sans.className}`}
+    >
       <span className="text-wrapper">
         <span className="text top">{text}</span>
         <span className="text bottom">{text}</span>
@@ -61,6 +69,6 @@ export default function FancyButton({ text = "Contact Us" }) {
       <span ref={iconWrapperRef} className="icon-wrapper">
         <i className="fa-solid fa-arrow-right"></i>
       </span>
-    </button>
+    </Link>
   );
 }
