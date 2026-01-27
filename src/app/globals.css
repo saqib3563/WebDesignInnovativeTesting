@@ -947,7 +947,7 @@ section h2 {
 
 .text_selectors {
   display: block;
-  font-size: 140px;
+  font-size: 75px;
   cursor: pointer !important;
   transition: all 0.3s linear;
 }
@@ -967,6 +967,7 @@ section h2 {
   position: relative;
   transition: all 0.3s linear;
   color: #666666;
+  filter: blur(3px);
 }
 
 
@@ -1047,6 +1048,7 @@ section h2 {
 .active-color {
   color: #fff !important;
   transform: translateX(-30px) !important;
+  filter: blur(0) !important;
 }
 
 .diamond-img {
@@ -4038,6 +4040,93 @@ button:hover~.cursor {
 .main-service-banner .bnr-wrp  {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+}
+
+.main-service-banner .bnr-wrp h2 {
+  color: var(--primary-bg-color);
+  font-size: 110px;
+  line-height: 140px;
+}
+
+.main-service-banner .bnr-wrp h2 span {
+  color: var(--accent-purple);
+}
+
+.main-service-banner .container-fluid {
+  height: 100%;
+}
+
+
+.word-slider {
+  display: inline-flex;
+}
+
+.char-box {
+  overflow: hidden;
+  height: 1.2em;
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+  transform: translateY(120%);
+}
+
+
+.boxes-sec .feature-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.feature-card-1 {
+    aspect-ratio: 1/1.7;
+}
+
+.feature-card-2 {
+    aspect-ratio: 1/1.6;
+}
+
+.feature-card-3 {
+    aspect-ratio: 1/1.2;
+}
+
+.feature-card-4 {
+    aspect-ratio: 1/1.3;
+}
+
+.feature-card-5 {
+    aspect-ratio: 1/1.15;
+}
+
+.feature-card-6 {
+    aspect-ratio: 1/1.8;
+}
+
+.feature-card-7 {
+    aspect-ratio: 1/.67;
+}
+
+.feature-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.feature-img:hover {
+    transform: scale(1.1);
+}
+
+.feature-row-third {
+    transform: translateY(255px);
+    position: relative;
+    z-index: 2;
 }
