@@ -2776,7 +2776,9 @@ button:hover~.cursor {
 }
 
 
-.reveal-effect {
+.reveal-effect,
+.reveal-effect-2,
+.reveal-effect-3 {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -2794,13 +2796,34 @@ button:hover~.cursor {
   transform: translateY(var(--reveal-y, 0%));
 }
 
-.reveal-effect:before {
+.reveal-effect-2::after,
+.reveal-effect-2::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transform: translateX(var(--reveal-x, 0%));
+}
+.reveal-effect-3::after,
+.reveal-effect-3::before {
+  position: absolute;
+  bottom: 0;
+  right:  0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transform: translateX(var(--reveal-x, 0%));
+}
+
+.reveal-effect:before, .reveal-effect-2::before, .reveal-effect-3::before {
   /* background: linear-gradient(#6d11e4, #a81bd5); */
   background: linear-gradient(#480068, #92278f);
   z-index: 1;
 }
 
-.reveal-effect:after {
+.reveal-effect:after, .reveal-effect-2::after, .reveal-effect-3::after {
   background: #ccc;
 }
 
@@ -3967,7 +3990,7 @@ button:hover~.cursor {
   margin-left: 21px;
 }
 
-.panel-ser:last-child{
+.panel-ser:last-child {
   height: auto !important;
 }
 
@@ -4037,7 +4060,7 @@ button:hover~.cursor {
   height: 100vh;
 }
 
-.main-service-banner .bnr-wrp  {
+.main-service-banner .bnr-wrp {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4077,56 +4100,83 @@ button:hover~.cursor {
 
 
 .boxes-sec .feature-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .feature-card-1 {
-    aspect-ratio: 1/1.7;
+  aspect-ratio: 1/1.7;
 }
 
 .feature-card-2 {
-    aspect-ratio: 1/1.6;
+  aspect-ratio: 1/1.6;
 }
 
 .feature-card-3 {
-    aspect-ratio: 1/1.2;
+  aspect-ratio: 1/1.2;
 }
 
 .feature-card-4 {
-    aspect-ratio: 1/1.3;
+  aspect-ratio: 1/1.3;
 }
 
 .feature-card-5 {
-    aspect-ratio: 1/1.15;
+  aspect-ratio: 1/1.15;
 }
 
 .feature-card-6 {
-    aspect-ratio: 1/1.8;
+  aspect-ratio: 1/1.8;
 }
 
 .feature-card-7 {
-    aspect-ratio: 1/.67;
+  aspect-ratio: 1/.67;
 }
 
 .feature-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all .5s ease;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s ease;
 }
 
 .feature-img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .feature-row-third {
-    transform: translateY(255px);
-    position: relative;
-    z-index: 2;
+  transform: translateY(255px);
+  position: relative;
+  z-index: 2;
+}
+
+.build-sec {
+  padding: 70px 0;
+}
+
+.build-box {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 50px;
+    background-color: #22244b47 !important;
+}
+
+.build-box h4 {
+  font-size: 26px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.build-box p {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.reveal-effect-2 {
+  margin-top: 35px;
 }
