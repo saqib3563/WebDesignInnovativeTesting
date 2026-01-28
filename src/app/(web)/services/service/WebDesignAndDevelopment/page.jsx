@@ -13,8 +13,11 @@ import featureImg1 from "@/app/(web)/assets/images/service1.jpg";
 import featureImg2 from "@/app/(web)/assets/images/service2.jpg";
 import featureImg3 from "@/app/(web)/assets/images/service3.jpg";
 import featureImg4 from "@/app/(web)/assets/images/service4.jpg";
+import revImg1 from "@/app/(web)/assets/images/blog-1.webp";
 import GlobeSection from "@/components/GlobeSection";
+import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import FaqSection from "@/components/FaqsSection";
+import { useGSAP } from "@/hooks/useGSAP";
 
 const words = [
   "marketing",
@@ -49,7 +52,7 @@ export default function Page() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((p) => (p + 1) % words.length);
-    }, 6000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -67,7 +70,7 @@ export default function Page() {
     gsap.to(letters, {
       y: "0%",
       opacity: 1,
-      duration: 0.6,
+      duration: 1.2,
       stagger: 0.07,
       ease: "power3.out",
     });
@@ -156,6 +159,46 @@ export default function Page() {
     },
     [currentImage],
   );
+
+  useGSAP(() => {
+    const items2 = document.querySelectorAll(".reveal-effect-2");
+
+    items2.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { "--reveal-x": "0%" },
+        {
+          "--reveal-x": "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 1,
+          },
+        },
+      );
+    });
+
+    const items3 = document.querySelectorAll(".reveal-effect-3");
+
+    items3.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { "--reveal-x": "0%" },
+        {
+          "--reveal-x": "-100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 1,
+          },
+        },
+      );
+    });
+  }, []);
 
   return (
     <>
@@ -251,6 +294,75 @@ export default function Page() {
         </div>
       </section>
       <section
+        className="build-sec"
+        style={{
+          backgroundImage: `url(${hero_bg.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container-fluid">
+          <div className="text-center">
+            <h2 className="primary-font">WHAT WE BUILD</h2>
+            <p
+              className={`para-section para-section-2 mt-5 ${instrument_sans.className}`}
+            >
+              We develop AI Chatbots, as well as AI Image Generation & Editing
+              tools, AI Search & Recommendation <br /> engines, Voice-AI
+              solutions, and AI-powered decision systems for businesses in
+              Singapore, while also <br /> providing custom models tailored to
+              unique business workflows.
+            </p>
+          </div>
+          <div className="row justify-content-center mt-5">
+            <div className="col-md-4 col-sm-12">
+              <div className="build-box h-100">
+                <h4 className="primary-font">AI Chatbot</h4>
+                <p className={instrument_sans.className}>
+                  <b>Intelligent Assistant:</b> Answers user questions using
+                  internal company data only, or, when required, selected
+                  external sources. Additionally, it can be tailored in tone and
+                  response style to align seamlessly with the brand.
+                </p>
+                <p className={instrument_sans.className}>
+                  <b>Animated Mascots & AI Widgets:</b> Custom-designed animated
+                  characters or interactive widgets for AI features. As a
+                  result, they enhance visual appeal, strengthen brand
+                  personality, and increase on-site engagement.
+                </p>
+                <div className="reveal-effect-2">
+                  <Image src={revImg1} alt="1" className="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 col-sm-12">
+              <div className="build-box mb-4">
+                <h4 className="primary-font">Renosolution</h4>
+                <p className={instrument_sans.className}>
+                  <b>AI Interior Design:</b> Users upload a room photo and
+                  select a style; then, the AI generates realistic design images
+                  instantly. As a result, users can visualise outcomes more
+                  clearly before making decisions.
+                </p>
+                <div className="reveal-effect-3">
+                  <Image src={revImg1} alt="1" className="img-fluid" />
+                </div>
+              </div>
+              <div className="build-box">
+                <h4 className="primary-font">BizHub AI</h4>
+                <p className={instrument_sans.className}>
+                  <b>AI Data-to-Decision Engine:</b> Users submit business data;
+                  then, the AI produces structured analysis (e.g., SWOT
+                  assessments or valuations) in real time. As a result, raw
+                  inputs are automatically transformed into usable outputs based
+                  on a human-defined logic framework.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
         ref={sectionRef2}
         style={{ backgroundImage: `url(${serviceBg.src})` }}
         className="padd-y-2 padd-x service-section position-relative"
@@ -331,38 +443,70 @@ export default function Page() {
           <div className="row align-items-end">
             <div className="col-6 col-md-3">
               <div className="feature-card feature-card-1">
-                <Image src={featureImg1} className="img-fluid feature-img" />
+                <Image
+                  src={featureImg1}
+                  className="img-fluid feature-img"
+                  alt="feature image"
+                />
               </div>
               <div className="feature-card feature-card-2">
-                <Image src={featureImg2} className="img-fluid feature-img" />
+                <Image
+                  src={featureImg2}
+                  className="img-fluid feature-img"
+                  alt="feature image"
+                />
               </div>
             </div>
             <div className="col-6 col-md-3">
               <div className="feature-card feature-card-3">
-                <Image src={featureImg3} className="img-fluid feature-img" />
+                <Image
+                  src={featureImg3}
+                  className="img-fluid feature-img"
+                  alt="feature image"
+                />
               </div>
               <div className="feature-card feature-card-4">
-                <Image src={featureImg4} className="img-fluid feature-img" />
+                <Image
+                  src={featureImg4}
+                  className="img-fluid feature-img"
+                  alt="feature image"
+                />
               </div>
             </div>
             <div className="col-12 col-md-6">
               <div className="row align-items-md-end">
                 <div className="col-6 col-md-6 feature-row-third">
                   <div className="feature-card feature-card-5">
-                    <Image src={featureImg1} className="img-fluid feature-img" />
+                    <Image
+                      src={featureImg1}
+                      className="img-fluid feature-img"
+                      alt="feature image"
+                    />
                   </div>
                   <div className="feature-card feature-card-5 feature-card-5-2">
-                    <Image src={featureImg2} className="img-fluid feature-img" />
+                    <Image
+                      src={featureImg2}
+                      className="img-fluid feature-img"
+                      alt="feature image"
+                    />
                   </div>
                 </div>
                 <div className="col-6 col-md-6">
                   <div className="feature-card feature-card-6">
-                    <Image src={featureImg3} className="img-fluid feature-img" />
+                    <Image
+                      src={featureImg3}
+                      className="img-fluid feature-img"
+                      alt="feature image"
+                    />
                   </div>
                 </div>
               </div>
               <div className="feature-card feature-card-7">
-                <Image src={featureImg3} className="img-fluid feature-img" />
+                <Image
+                  src={featureImg3}
+                  className="img-fluid feature-img"
+                  alt="feature image"
+                />
               </div>
             </div>
           </div>
