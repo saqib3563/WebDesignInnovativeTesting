@@ -90,8 +90,10 @@ const PageLoader = ({ onComplete }) => {
     animate();
 
     // Text animation
-    const text1 = "PRESTIGE";
-    const text2 = "IT CONSULTANT";
+    // const text1 = "PRESTIGE";
+    // const text2 = "IT CONSULTANT";
+    const text1 = "LOREM";
+    const text2 = "IPSUM";
     
     const chars1 = text1.split('').map((char, i) => 
       `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`

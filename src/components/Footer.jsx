@@ -1,11 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import logoImage from "@/app/(web)/assets/images/logo.avif";
 import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import Link from "next/link";
-import { useRef } from "react";
-import { usePathname } from "next/navigation";
 import SwiperComponent from "./slider";
 import { SwiperSlide } from "swiper/react";
 import logo1 from "@/app/(web)/assets/images/footer-logo-1.webp";
@@ -56,41 +53,9 @@ const Footer = () => {
     logo12,
   ];
 
-  const footerRef = useRef(null);
-  const path = usePathname();
-  const navLinks = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "About Us",
-      path: "#",
-    },
-    {
-      title: "Projects",
-      path: "#",
-    },
-    {
-      title: "Services",
-      path: "#",
-    },
-    {
-      title: "Contact Us",
-      path: "#",
-    },
-    {
-      title: "Blogs",
-      path: "#",
-    },
-    {
-      title: "FAQS",
-      path: "#",
-    },
-  ];
 
   return (
-    <footer ref={footerRef} className="padd-y padd-x">
+    <footer  className="padd-y padd-x">
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
@@ -317,11 +282,7 @@ const Footer = () => {
                 autoplay={{ delay: 1000 }}
                 speed={2000}
                 breakpoints={{
-                  1280: { slidesPerView: 5 }, // large screens
-                  1024: { slidesPerView: 4 },
-                  768: { slidesPerView: 3 },
-                  500: { slidesPerView: 2 },
-                  0: { slidesPerView: 1 }, // mobile
+                  1280: { slidesPerView: 5 }
                 }}
               >
                 {logos.map((logo, index) => (
