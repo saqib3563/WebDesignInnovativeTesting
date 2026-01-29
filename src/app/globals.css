@@ -24,6 +24,9 @@
   --inter-font: "Inter", sans-serif;
 }
 
+*{
+  cursor: none !important;
+}
 /* Our OLD GRADIENT COLOR background: linear-gradient(180deg, #7c3aed, #9333ea); */
 
 
@@ -31,7 +34,7 @@
   /* font-family: var(--mango-font); */
   /* font-family: "Bebas Neue", sans-serif; */
   font-family: nasa-font;
-  line-height: 0.8;
+  line-height: 1.1;
   /* letter-spacing: 1px; */
 }
 
@@ -519,7 +522,7 @@ section h2 {
   font-weight: 900;
   font-style: Black;
   font-size: 160px;
-  line-height: 0.9 !important;
+  line-height: 1.1 !important;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1887,8 +1890,215 @@ button:hover~.cursor {
   overflow: hidden;
 }
 
-/* Overlay */
-.sidebar-overlay {
+
+/* =========================== SIDE BAR START =========================== */
+
+
+.main-menu-sec {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .9s;
+    padding-top: 200px
+}
+
+.main-menu-sec .row {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99
+}
+
+body.sidebar-open-body .main-menu-sec {
+    visibility: visible;
+    opacity: inherit;
+    background: #001919
+}
+
+.main-menu-sec:after, .main-menu-sec:before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    clip-path: circle(50px at 0% 0%);
+    transition: all .9s;
+    top: 0;
+    left: 0
+}
+
+.main-menu-sec:before {
+    background-color: #480068;
+}
+
+.main-menu-sec:after {
+    /* background-color: #001919; */
+    background: linear-gradient(116.09deg, #480068 16.66%, #92278f 94.42%);
+    clip-path: circle(50px at 100% 100%);
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0
+}
+
+body.sidebar-open-body .main-menu-sec:after, body.sidebar-open-body .main-menu-sec:before {
+    clip-path: circle(100%)
+}
+
+.menu-info li + li {
+    border-top: solid 1px #ffffff;
+    padding: 30px 0;
+}
+
+.menu-info li {
+    padding-bottom: 30px;
+    overflow: hidden
+}
+
+.menu-info li h6 {
+    color: #a8a8a8;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px
+}
+
+.menu-info li a {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500
+}
+
+.menu-info li .box {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.menu-info li:last-child {
+    padding-bottom: 0
+}
+
+.main-menu-sec .social-list {
+    position: relative;
+    top: 130px;
+    margin-top: 0;
+}
+
+.navigation {
+    width: 100%;
+    position: relative;
+}
+
+.navigation > ul > li {
+    width: 50%;
+    padding-left: 50px;
+    overflow: hidden;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.navigation > ul > li > a {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+    display: block;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    line-height: 65px;
+    text-decoration: none;
+}
+
+.navigation > ul > li > a:before {
+    content: "01.";
+    position: absolute;
+    left: -50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    top: 20px;
+    transform: scale(0);
+    transition: all .5s;
+    letter-spacing: 1px;
+}
+
+.navigation > ul > li > a:hover:before {
+  transform: scale(1);
+}
+
+.sidebar-open-body .navigation > ul > li > a {
+    animation-name: slideInUp;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+}
+}
+
+.navigation .sub-menu {
+    position: absolute;
+    top: 37%;
+    padding-left: 55px;
+    right: 12%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.hover-parent:hover .navigation .sub-menu {
+  display: block;
+}
+
+.navigation .sub-menu > li + li {
+    margin-top: 20px;
+}
+
+.navigation .sub-menu > li > a {
+    font-size: 36px;
+    font-weight: 500;
+    color: #41696b;
+}
+
+.sub-menu .sub-child {
+    margin-top: 25px;
+    display: none;
+}
+
+.sub-menu .sub-child.active {
+    display: block;
+}
+
+.sub-menu .sub-child > li > a {
+    color: #41696b;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 28px;
+    position: relative;
+    transition: all .5s;
+    display: flex;
+    line-height: 1.1;
+}
+
+.trending-menu-list .sub-menu {
+    top: 57%;
+    right: 0;
+}
+
+.trending-menu-list .sub-menu > li > a {
+    display: flex;
+    width: 70%;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+
+/* .sidebar-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -1898,7 +2108,6 @@ button:hover~.cursor {
   transition: opacity 0.3s ease;
 }
 
-/* Sidebar */
 .side-bar {
   position: fixed;
   right: 0;
@@ -1911,14 +2120,11 @@ button:hover~.cursor {
   padding: 24px;
   overflow-y: auto;
   transform: translateX(100%);
-  /* start hidden on right */
   z-index: 999;
 }
 
 
-/* CSS */
 .sidebar-open-body {
-  /* position: fixed; */
   width: 100%;
   overflow: hidden;
 }
@@ -1954,7 +2160,6 @@ button:hover~.cursor {
   object-fit: contain;
 }
 
-/* MENU */
 .sidebar-menu {
   list-style: none;
   padding: 0;
@@ -2002,7 +2207,6 @@ button:hover~.cursor {
   color: #fff;
 }
 
-/* CTA */
 .sidebar-cta {
   margin-top: 30px;
 }
@@ -2015,7 +2219,6 @@ button:hover~.cursor {
   padding: 4px 8px;
 }
 
-/* SOCIAL */
 .sidebar-social {
   margin-top: auto;
   display: flex;
@@ -2030,7 +2233,9 @@ button:hover~.cursor {
   display: grid;
   place-items: center;
   font-size: 14px;
-}
+} */
+
+/* =========================== SIDE BAR END =========================== */
 
 .circle-area {
   height: 1100;
@@ -2387,7 +2592,7 @@ button:hover~.cursor {
   gap: 10px;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 35px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -3624,7 +3829,7 @@ button:hover~.cursor {
 .scrolling-text-wrapper {
   align-items: center;
   width: 100%;
-  padding: 60px 0;
+  padding: 35px 0;
   display: flex;
   overflow: hidden;
   white-space: nowrap;
@@ -3633,7 +3838,7 @@ button:hover~.cursor {
 .scrolling-text-wrapper h4 a {
   text-decoration: none;
   color: var(--primary-color);
-  font-size: 24px;
+  font-size: 20px;
   border: 1px solid var(--primary-color);
   border-radius: 50px;
   padding: 20px 50px;
@@ -4352,7 +4557,7 @@ border-radius: 30px;
 }
 
 
-.new-cl {
+.Inner_Service_Banner {
     box-shadow: 1px black;
     /* background: linear-gradient(#480068 -58%, #92278f6b 100%); */
     background: linear-gradient(#480068, #92278f);

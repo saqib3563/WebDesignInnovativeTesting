@@ -19,20 +19,20 @@ const ContactUsBanner = () => {
           <h2 className="primary-font text-black" data-aos="fade-up">Contact us</h2>
           <div className="bread-crumb">
             <Link
-              href="#"
-              className="para-section para-sec-crumb text-decoration-none text-black"
+              href="/"
+              className="para-section para-sec-crumb text-decoration-none text-black primary-font"
             >
               Home
             </Link>
             <span
-              className={`${inter.className} para-section para-section-crumb`}
+              className="para-section para-section-crumb text-black primary-font"
             >
               -
             </span>
             <span
-              className={`${inter.className} para-section para-section-crumb`}
+              className="para-section para-section-crumb text-black primary-font"
             >
-              Contact us
+              Contact Us
             </span>
           </div>
         </div>

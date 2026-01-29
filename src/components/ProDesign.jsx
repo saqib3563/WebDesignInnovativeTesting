@@ -135,25 +135,30 @@ const ProDesignSection = () => {
               {proDesignData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className={`card-border card-${index + 1}`}>
-                    <div className="card-custom">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <h3 className="primary-font mb-0">{item.title}</h3>
-                        <Link
-                          href={item.link}
-                          className={`btn-main text-decoration-none ${instrument_sans.className}`}
-                        >
-                          <span className="text">Read More</span>
-                          <span>
-                            <i className="fa-solid fa-arrow-right"></i>
-                          </span>
-                        </Link>
-                      </div>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        className="img-fluid"
-                      />
+                <div className="card-custom">
+                  <div className="card-custom-child">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      className="img-fluid"
+                    />
+                    <Link href={item.link} className="portfolio-btn">
+                      <span>
+                        <i className="fa-solid fa-eye"></i>
+                      </span>
+                    </Link>
+                    <div className="portfolio-card-categories">
+                      <p>
+                        <Link href="item.link">Web design</Link>
+                      </p>
                     </div>
+                  </div>
+                  <div className="card-custom-content">
+                    <h3 className="primary-font mb-0 ">{item.title}</h3>
+                    <h6 className="card-paragraph mb-4 text-white">Increase Instagram engagement and drive traffic to website.</h6>
+                    <FancyButton text="Read More"/>
+                  </div>
+                </div>
                   </div>
                 </SwiperSlide>
               ))}

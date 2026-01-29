@@ -28,7 +28,7 @@ const Header = () => {
       <div className="container-fluid">
         <div className="header-main">
           <div>
-            <a href=".">
+            <a href="/" className="d-block">
               <Image
                 src={logoImage}
                 alt="logo"

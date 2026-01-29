@@ -60,7 +60,7 @@ const MagneticButton = () => {
     <span style={{ "--index": 3 }}>P</span>
     <span style={{ "--index": 4 }}> </span>
     <span style={{ "--index": 5 }}>U</span>
-    <span style={{ "--index": 6 }}>s</span>
+    <span style={{ "--index": 6 }}>S</span>
     <span style={{ "--index": 7 }}> </span>
     <span style={{ "--index": 8 }}>A</span>
     <span style={{ "--index": 9 }}> </span>

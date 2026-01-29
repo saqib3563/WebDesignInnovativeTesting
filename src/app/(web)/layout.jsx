@@ -11,6 +11,7 @@ import MagicCursor from "@/components/MagicCursor";
 import MagneticButton from "@/components/magnetic-logic";
 import { SideBarProvider } from "../context";
 import BrandLayout from "@/components/BrandLayout";
+import ScrollToTopOnNavigation from "@/components/ScrollToTopOnNavigation";
 
 export const metadata = {
   title: "Prestige IT Consulting",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <ScrollToTopOnNavigation />
         <AOSInit />
         <MagicCursor />
         <SideBarProvider>
