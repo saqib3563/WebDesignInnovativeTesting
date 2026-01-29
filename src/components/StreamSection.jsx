@@ -38,12 +38,12 @@ const StreamSection = () => {
       <section className="stream-sec">
         <div className="container">
           <div className="about-content-area portfolio-top-wrap">
-            <h3 className={`${inter.className} abt-heading mb-5 text-start`}>
+            <h3 className="abt-heading mb-5 text-start primary-font">
               [ FunFacts ]
             </h3>
 
             <p
-              className={`${instrument_sans.className} abt-para text-start mb-4`}
+              className="abt-para text-start mb-4 primary-font"
             >
               "A streamlined <br />
               solution build to power <br />

@@ -112,7 +112,7 @@ const OurServices = () => {
             </div>
             <div className="c-panel_bt">
               <h1 className="primary-font">Web Design & Development</h1>
-              <FancyButton text="Learn More" href="/services/service/WebDesignAndDevelopment" />
+              <FancyButton text="Learn More" href="/services/web-design-and-development" />
             </div>
           </div>
           <div className="c-panel-visual">

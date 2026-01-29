@@ -24,7 +24,7 @@ export const useGSAP = (callback, deps = [], selector = null) => {
         ScrollTrigger.getAll().forEach(trigger => {
           if (trigger.trigger && trigger.trigger.matches && trigger.trigger.matches(selector)) {
             trigger.kill();
-          }
+          } 
         });
       }
     };

@@ -58,7 +58,7 @@ const MissionSection = () => {
             </div>
             <div className="col-md-6">
               <h3
-                className={`mission-hd mt-0 mb-4 ${instrument_sans.className}`}
+                className="mission-hd mt-0 mb-4 primary-font"
               >
                 01. Global Presense
               </h3>
@@ -84,7 +84,7 @@ const MissionSection = () => {
               </div>
               <div className="text-careers">
                 <h3
-                  className={`mission-hd mt-0 mb-4 ${instrument_sans.className}`}
+                  className="mission-hd mt-0 mb-4 primary-font"
                 >
                   01. Global Presense
                 </h3>
@@ -107,7 +107,7 @@ const MissionSection = () => {
             <div className="col-md-6 col-lg-3 col-xl-3">
               <div className="text-careers">
                 <h3
-                  className={`mission-hd mt-0 mb-4 ${instrument_sans.className}`}
+                  className="mission-hd mt-0 mb-4 primary-font"
                 >
                   01. Global Presense
                 </h3>
