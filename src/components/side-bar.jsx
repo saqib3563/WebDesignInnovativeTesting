@@ -1,127 +1,73 @@
 "use client";
-import { useContext, useEffect, useRef } from "react";
-import { sideBarContext } from "@/app/context";
-import Image from "next/image";
-import Link from "next/link";
-import { gsap } from "gsap";
-// import logoImage from "@/app/(web)/assets/images/logo.avif"
-import logoImage from "@/app/(web)/assets/images/inner-logo.png"
-import iconMenu from "@/app/(web)/assets/images/Icon.png";
-import { useRouter, usePathname } from "next/navigation";
-import FancyButton from "./FancyButton";
 
-const menuItems = [
-  { label: "HOME", path: "/" },
-  { label: "ABOUT US", path: "/about" },
-  { label: "SERVICES", path: "/services" },
-  { label: "CAREERS", path: "/careers" },
-  { label: "WORK", path: "/work" },
-  { label: "BLOGS", path: "/blogs" },
-  { label: "CONTACT US", path: "/contact-us" },
-];
+
+import Link from "next/link";
+// import logoImage from "@/app/(web)/assets/images/logo.avif"
+
 
 const SideBar = () => {
-  const { open, toggleMenu } = useContext(sideBarContext);
-  const sidebarRef = useRef();
-  const overlayRef = useRef();
-  const menuItemsRef = useRef([]);
-  const router = useRouter();
-  const pathname = usePathname(); // current route
 
-  useEffect(() => {
-    if (open) {
-      // document.body.style.overflow = "hidden";
 
-      gsap.set(overlayRef.current, { display: "block" });
-      gsap.to(overlayRef.current, { opacity: 1, duration: 0.3 });
-
-      gsap.fromTo(
-        sidebarRef.current,
-        { x: "100%" },
-        { x: 0, duration: 0.5, ease: "power3.out" }
-      );
-
-      gsap.fromTo(
-        menuItemsRef.current,
-        { x: 20, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.4, stagger: 0.1 }
-      );
-    } else {
-      document.body.style.overflow = "";
-
-      gsap.to(sidebarRef.current, { x: "100%", duration: 0.4 });
-      gsap.to(overlayRef.current, {
-        opacity: 0,
-        duration: 0.3,
-        onComplete: () => gsap.set(overlayRef.current, { display: "none" }),
-      });
-    }
-  }, [open]);
-
-  const handleNavigate = (path) => {
-    toggleMenu();
-    router.push(path);
-  };
 
   return (
-    <>
-      {/* Overlay */}
-      <div ref={overlayRef} className="sidebar-overlay" onClick={toggleMenu}></div>
-
-      {/* Sidebar */}
-      <div className="side-bar" ref={sidebarRef}>
-        {/* Header */}
-        <div className="sidebar-header">
-          <Image src={logoImage} alt="logo" width={45} height={45} className="side-logo" />
-          <button className="menu-btn" onClick={toggleMenu}>
-            <Image src={iconMenu} alt="menu_icon" width={30} height={30} />
-          </button>
+    <section className="main-menu-sec">
+    <div className="container">
+        <div className="row">
+            <div className="col-12 col-md-7 col-lg-8 col-xl-8">
+                <nav className="navigation">
+                    <ul>
+                        <li><Link href="/">HOME</Link></li>
+                        <li><Link href="/about">ABOUT US</Link></li>
+                        <li className="hover-parent position-relative">
+                            <Link href="/services">SERVICES</Link>
+                            <ul className="sub-menu">
+                                <li className="active"><Link href="#">Mobile Application</Link>
+                                    <ul className="sub-child active">
+                                        <li><Link href="#">iOS App Development</Link></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li className="show-mobile"><Link href="/careers">CAREERS</Link></li>
+                        <li><Link href="/work">WORK</Link></li>
+                        <li className="#"><Link href="#">BLOG</Link></li>
+                        <li><Link href="/contact-us">CONTACT US</Link></li>
+                    </ul>
+                </nav>
+            </div>
+            <div className="col-12 col-md-5 col-lg-2 col-xl-2">
+                <ul className="menu-info">
+                    <li>
+                        <div className="box">
+                            <h6>Give Us a Call</h6>
+                        </div>
+                        <div className="box">
+                            <h6>              
+                              <Link href="tel:+1 281-849-1614">+1 281-849-1614</Link>
+                            </h6>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="box">
+                            <h6>Let’s Discuss</h6>
+                        </div>
+                        <div className="box">
+                            <h6>
+                              <Link href="mailto:contact@prestige-it.com">contact@prestige-it.com</Link>
+                            </h6>
+                        </div>
+                    </li>
+                </ul>
+                {/* <ul className="social-list">
+                    <li><a target="_blank" href="https://www.facebook.com/Bytrixtechnologies/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/bytrixtech"><i class="fa fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/bytrix-technologies/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/bytrix.technologies/"><i class="fa fa-instagram"></i></a></li>
+                </ul> */}
+            </div>
         </div>
-
-        {/* Menu */}
-        <ul className="sidebar-menu">
-          {menuItems.map((item, i) => {
-            const isActive = pathname === item.path;
-
-            return (
-              <li
-                key={i}
-                ref={(el) => (menuItemsRef.current[i] = el)}
-                className={isActive ? "active" : ""}
-                onClick={() => handleNavigate(item.path)}
-              >
-                <span>
-                  {item.label}
-                  {isActive && (
-                    <sup>({String(i + 1).padStart(2, "0")})</sup>
-                  )}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
-
-        {/* CTA */}
-        <div className="sidebar-cta mb-4">
-          {/* <button className="btn-main" onClick={() => handleNavigate("/contact")}>
-            <span className="text">Contact Us</span>
-            <span>
-              <i className="fa-solid fa-arrow-right"></i>
-            </span>
-          </button> */}
-          <FancyButton text="Contact Us"/>
-        </div>
-
-        {/* Social */}
-        <div className="sidebar-social">
-          {["instagram", "x-twitter", "linkedin", "youtube"].map((icon, i) => (
-            <Link key={i} href="#" className="social-links">
-              <i className={`fa-brands fa-${icon}`}></i>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </>
+    </div>
+    </section>
   );
 };
 

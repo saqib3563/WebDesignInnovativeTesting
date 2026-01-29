@@ -66,7 +66,7 @@ const TechnologiesSection = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 className="primary-font mb-3 text-center text-black">
+            <h2 className="primary-font mb-3 text-center text-black" data-aos="fade-up">
               Technologies
               <br />
               We Expert

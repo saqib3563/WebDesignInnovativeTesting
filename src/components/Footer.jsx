@@ -95,12 +95,12 @@ const Footer = () => {
                   </h4>
                   <ul className="quick-link-list">
                     <li>
-                      <Link href="#" className="quick-link">
+                      <Link href="/about" className="quick-link">
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="#" className="quick-link">
+                      <Link href="/work" className="quick-link">
                         Works
                       </Link>
                     </li>
@@ -115,7 +115,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="#" className="quick-link">
+                      <Link href="/contact-us" className="quick-link">
                         Contact Us
                       </Link>
                     </li>
@@ -130,7 +130,7 @@ const Footer = () => {
                     <div className="col-12 col-md-4">
                       <ul className="quick-link-list">
                         <li>
-                          <Link href="#" className="quick-link">
+                          <Link href="/services/web-design-and-development" className="quick-link">
                             Design & Dev
                           </Link>
                         </li>

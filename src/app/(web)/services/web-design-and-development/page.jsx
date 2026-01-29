@@ -329,8 +329,8 @@ export default function Page() {
         }}
       >
         <div className="container-fluid">
-          <div className="text-center">
-            <h2 className="primary-font">WHAT WE BUILD</h2>
+          <div className="text-center" data-aos="fade-up">
+            <h2 className="primary-font reveal-text">WHAT WE BUILD</h2>
             <p
               className={`para-section para-section-2 mt-5 ${instrument_sans.className}`}
             >
@@ -463,7 +463,7 @@ export default function Page() {
       >
         <div className="container-fluid">
           <div className="text-center">
-            <h2 className="primary-font text-black">
+            <h2 className="primary-font text-black" data-aos="fade-up">
               Proudly Building Digital
             </h2>
             <p
@@ -474,7 +474,7 @@ export default function Page() {
               images images
             </p>
           </div>
-          <div className="row align-items-end">
+          <div className="row align-items-end" data-aos="fade-up">
             <div className="col-6 col-md-3">
               <div className="feature-card feature-card-1">
                 <Image

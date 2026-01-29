@@ -73,7 +73,7 @@ export default function Page() {
         }}
       >
         <div className="container-fluid">
-          <div className="row align-items-center new-cl">
+          <div className="row align-items-center Inner_Service_Banner" data-aos="fade-up">
             <div className="col-md-6">
               <h2 className="primary-font">
                 websites that give businesses unfair advantage.
@@ -140,8 +140,8 @@ export default function Page() {
         }}
       >
         <div className="container-fluid">
-          <div className="text-center">
-            <h2 className="primary-font">WHAT WE BUILD</h2>
+          <div className="text-center" data-aos="fade-up">
+            <h2 className="primary-font reveal-text">WHAT WE BUILD</h2>
             <p
               className={`para-section para-section-2 mt-5 ${instrument_sans.className}`}
             >
@@ -210,13 +210,13 @@ export default function Page() {
         }}
       >
         <div className="container-fluid">
-          <div className="row align-items-end mb-5">
+          <div className="row align-items-end mb-5" data-aos="fade-up">
             <div className="col-md-6">
               <h6 className="primary-font">
                 <i className="fa-solid fa-circle animate-pulse"></i> 4 SIMPLE
                 STEPS
               </h6>
-              <h2 className="primary-font">
+              <h2 className="primary-font reveal-text">
                 Effortless Process, <br /> Continuous Supply
               </h2>
             </div>
@@ -231,7 +231,7 @@ export default function Page() {
             </div>
           </div>
           <div className="effort-box-wrapper">
-            <div className="effort-box">
+            <div className="effort-box" data-aos="fade-up">
               <h5 className="primary-font">
                 <span>01.</span> Dream, Design, Deliver
               </h5>
@@ -243,7 +243,7 @@ export default function Page() {
                 create a tailored game plan that’s all you.
               </p>
             </div>
-            <div className="effort-box">
+            <div className="effort-box" data-aos="fade-up">
               <h5 className="primary-font">
                 <span>02.</span> Design Like a Pro
               </h5>
@@ -255,7 +255,7 @@ export default function Page() {
                 refining what works and tweaking what doesn’t.
               </p>
             </div>
-            <div className="effort-box">
+            <div className="effort-box" data-aos="fade-up">
               <h5 className="primary-font">
                 <span>03.</span> Code, Build, and Conquer
               </h5>
@@ -268,7 +268,7 @@ export default function Page() {
                 pressure.
               </p>
             </div>
-            <div className="effort-box">
+            <div className="effort-box" data-aos="fade-up">
               <h5 className="primary-font">
                 <span>04.</span> Launch Like a Legend
               </h5>
@@ -281,7 +281,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="effort-footer mt-4">
+          <div className="effort-footer mt-4" data-aos="fade-up">
             <div>
               <div className="marquee">
                 <div className="marquee__inner">

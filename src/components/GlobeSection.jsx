@@ -324,18 +324,10 @@ const GlobeSection = () => {
             <p data-aos="fade-right" className="globe_title primary-font mb-3">
               — {testimonials[active].name}, {testimonials[active].role}
             </p>
-            {/* <button
-              className={`btn-main mx-auto ${instrument_sans.className}`}
-              data-aos="zoom-in"
-            >
-              <span className="text">More Reviews</span>
-              <span>
-                <i className="fa-solid fa-arrow-right"></i>
-              </span>
-            </button> */}
-            <div className="d-flex justify-content-center">
+
+            {/* <div className="d-flex justify-content-center">
               <FancyButton text="More Reviews" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
