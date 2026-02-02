@@ -1,5 +1,4 @@
 "use client";
-// import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 import bnner_img from "@/app/(web)/assets/images/robot-hand.webp";
 import GlobeImg from "@/app/(web)/assets/images/globe-hero.webp";
@@ -7,9 +6,6 @@ import GlobeImg from "@/app/(web)/assets/images/globe-hero.webp";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { bebas_neu } from "@/app/(web)/assets/fonts/custom";
-import SliderSection2 from "@/components/slider-section-2";
-import MagneticButton from "@/components/magnetic-logic";
 
 const HeroBanner = () => {
   const containerRef = useRef(null);
@@ -23,11 +19,9 @@ const HeroBanner = () => {
       () => {
       const tl = gsap.timeline({ delay: 0.6 });
 
-      // Split text into individual characters
       const webDesignChars = headingRef.current.textContent.split('');
       const innovatorsChars = innovatorRef.current.textContent.split('');
       
-      // Clear original text and create spans for each character
       headingRef.current.innerHTML = webDesignChars.map(char => 
         `<span style="display: inline-block;">${char === ' ' ? '&nbsp;' : char}</span>`
       ).join('');
@@ -221,7 +215,6 @@ const HeroBanner = () => {
             {/* 🧠 TEXT */}
             <h1
               ref={headingRef}
-              // className={`main_bnner_heading ${bebas_neu.className}`}
               className={`main_bnner_heading primary-font`}
             >
               PRESTIGE
@@ -229,7 +222,6 @@ const HeroBanner = () => {
 
             <h2
               ref={innovatorRef}
-              // className={`innovator-text ${bebas_neu.className}`}
               className={`innovator-text primary-font`}
             >
               IT CONSULTING

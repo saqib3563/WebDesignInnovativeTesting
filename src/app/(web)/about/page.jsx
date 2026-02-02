@@ -20,10 +20,8 @@ const page = () => {
 
       <StreamSection />
 
-      {/* Globe Section */}
       <GlobeSection />
 
-      {/* Faq Section */}
       <FaqSection />
     </>
   );

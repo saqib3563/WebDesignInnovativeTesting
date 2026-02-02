@@ -237,9 +237,6 @@
 }
 
 @media (max-width:1480px) {
-    .logo {
-        width: 60px;
-    }
 
     .pro-icon {
         height: 50px;
@@ -717,7 +714,7 @@
     }
 
     .logo {
-        width: 45px;
+        width: 75px;
     }
 
     .hero_bnner {
@@ -876,8 +873,8 @@
         top: 10px;
         font-size: 21px;
     }
-    
-    
+
+
     .last_box_web {
         width: 300px;
         height: 300px;
@@ -1059,6 +1056,39 @@
         gap: 20px;
     }
 
+    .header-main {
+        height: 75px;
+    }
+
+    .menu-info li a {
+        font-size: 18px;
+    }
+
+    .menu-info li {
+        padding-bottom: 8px;
+    }
+
+    .menu-info {
+        padding-left: 50px;
+        margin-top: 38px;
+    }
+
+    .right-sidebar h2 {
+        font-size: 30px;
+    }
+    .para-sm, .idea-field, .para-xs {
+        font-size: 13px;
+    }
+
+    .type-label {
+        font-size: 10px;
+    }
+
+    .idea-submit-btn {
+        font-size: 12px;
+    }
+
+
     .service-link-area {
         flex-direction: column;
         gap: 10px;
@@ -1115,12 +1145,103 @@
         font-size: 1rem;
     }
 
-    .card-custom img {
-        height: 175px;
+    .card-custom img,
+    .portfolio-card:after,
+    .card-custom-child:after,
+    .card-custom-child {
+        height: 175px !important;
     }
 
+    .card-custom h3 {
+        font-size: 20px;
+    }
+
+    .card-paragraph {
+
+        font-size: 13px;
+        margin-top: 18px;
+    }
+
+    .card-custom-child .portfolio-card-categories {
+        right: 10px;
+        top: 8px;
+    }
+
+    .portfolio-card-categories p a {
+        font-size: 10px;
+    }
+
+    .portfolio-item-wrapper .portfolio-card .portfolio-btn,
+    .card-custom-child .portfolio-btn {
+        height: 50px;
+        width: 50px;
+        font-size: 18px;
+    }
+
+    .pro-section .fancy-btn {
+        margin: 0 auto;
+    }
+
+    .service-section:before,
+    .service-section::after {
+        display: none;
+    }
+
+    .service-section {
+        height: 865px !important;
+        max-height: 865px !important;
+    }
+
+    .next-person,
+    .previous-person {
+        font-size: 13px;
+    }
+
+    .next-btn-wrap {
+        bottom: -5px;
+    }
+
+    .faq-form-wrapper {
+        padding: 25px;
+    }
+
+    .faq-form-wrapper h2 {
+        font-size: 22px;
+    }
+
+    .response-para {
+        font-size: 13px;
+    }
+
+    .wave-group .input, .wave-group .label {
+        font-size: 12px;
+    }
+
+    .faq-count {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.idea-btn__text > span {
+    font-size: 12px;
+}
+.idea-btn {
+    height: 90px;
+    width: 90px;
+}
+
+.idea-btn__circle {
+    height: 30px;
+    width: 30px;
+}
+
+.navigation > ul > li > a {
+    font-size: 23px;
+    line-height: unset;
+}
+
     .card-custom {
-        padding: 21px 25px 20px;
+        padding: 15px;
     }
 
     .footer-social-links a {
@@ -1346,6 +1467,14 @@
     .fancy-btn:hover .bottom {
         transform: translateY(-15px);
     }
+
+    .about-sec .fancy-btn {
+        margin: 0 auto;
+    }
+
+    .card-custom-content {
+        padding: 20px;
+    }
 }
 
 @media (max-width:480px) {
@@ -1424,9 +1553,6 @@
         font-size: 60px;
     }
 
-    .logo {
-        width: 30px;
-    }
 
     .menu-btn img {
         width: 16px;
@@ -1446,7 +1572,7 @@
     }
 
     .main-footer-head {
-        font-size: 65px;
+        font-size: 43px;
     }
 
     .inp-footer {
@@ -1487,10 +1613,14 @@
 
     .main_bnner_heading,
     .innovator-text {
-        font-size: 50px;
+        font-size: 34px;
     }
 
     .side-bar {
         max-width: 300px;
+    }
+
+    .para-section br {
+        display: none;
     }
 }

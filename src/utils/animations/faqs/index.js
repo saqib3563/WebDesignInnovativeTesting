@@ -12,8 +12,8 @@ export const FaqAnimation = () => {
     });
 
     Observer.create({
-        target: ".scrolling-text",   // ❗ important
-        type: "wheel,touch",         // mobile support
+        target: ".scrolling-text",   
+        type: "wheel,touch",    
         preventDefault: false,
         onChangeY(self) {
             let factor = 2.5;
@@ -42,9 +42,9 @@ export const FaqAnimation = () => {
             xPercents = [],
             curIndex = 0,
             pixelsPerSecond = (config.speed || 1) * 100,
-            snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+            snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), 
             totalWidth, curX, distanceToStart, distanceToLoop, item, i;
-        gsap.set(items, { // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+        gsap.set(items, {  
             xPercent: (i, el) => {
                 let w = widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
                 xPercents[i] = snap(parseFloat(gsap.getProperty(el, "x", "px")) / w * 100 + gsap.getProperty(el, "xPercent"));

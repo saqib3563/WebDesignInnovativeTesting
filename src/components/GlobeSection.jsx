@@ -16,7 +16,6 @@ import client_image_8 from "@/app/(web)/assets/images/client_image-8.png";
 import client_image_9 from "@/app/(web)/assets/images/client_image-9.png";
 
 import Image from "next/image";
-import FancyButton from "./FancyButton";
 import { useGSAP } from "@/hooks/useGSAP";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -259,9 +258,7 @@ const GlobeSection = () => {
           alignItems: "center",
         }}
       >
-        {/* Static Container */}
         <div style={{ width: "100%", height: 500 }} className="globe-container">
-          {/* Rotating Images Container */}
           <div ref={circleRef} className="circle-area">
             {testimonials.map((t, i) => {
               const angle = (i / testimonials.length) * 2 * Math.PI;
@@ -314,7 +311,6 @@ const GlobeSection = () => {
             })}
           </div>
 
-          {/* Static Center Content */}
 
           <div className="text_content_area">
             <p className={`globe-para mb-3 ${instrument_sans.className}`}>
@@ -325,9 +321,6 @@ const GlobeSection = () => {
               — {testimonials[active].name}, {testimonials[active].role}
             </p>
 
-            {/* <div className="d-flex justify-content-center">
-              <FancyButton text="More Reviews" />
-            </div> */}
           </div>
         </div>
       </div>

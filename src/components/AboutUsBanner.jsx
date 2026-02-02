@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
-// import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";

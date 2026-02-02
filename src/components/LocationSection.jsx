@@ -3,9 +3,6 @@
 import Link from "next/link";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
-// import Link from "next/link";
-// import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
-
 const LocationSection = () => {
   return (
     <section className="location-sec padd-x"
@@ -18,7 +15,7 @@ const LocationSection = () => {
       <div className="container-fluid">
         <div className="row justify-content-between">
           <div className="col-md-6">
-            <h2 className="primary-font" data-aos="fade-up">Locations</h2>
+            <h2 className="primary-font reveal-text-black" data-aos="fade-up">Locations</h2>
             <p className="loc-para" data-aos="fade-up"> 
               <i className="fa-solid me-2 fa-location-dot"></i>
               <span>Address:</span>

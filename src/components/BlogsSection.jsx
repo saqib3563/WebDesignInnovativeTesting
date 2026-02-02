@@ -5,7 +5,6 @@ import blogImg2 from "@/app/(web)/assets/images/blog-image-2.webp";
 import blogImg3 from "@/app/(web)/assets/images/blog-image-3.webp";
 import blogImg4 from "@/app/(web)/assets/images/blog-image-4.webp";
 import blogImg5 from "@/app/(web)/assets/images/blog-image-5.webp";
-import blogImg6 from "@/app/(web)/assets/images/blog-image-6.webp";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";
@@ -31,7 +30,6 @@ const Blogs = () => {
     const cards = gsap.utils.toArray(".blog-cards");
     if (!cards.length) return;
 
-    // Reset leftover GSAP styles
     cards.forEach((card) => {
       gsap.set(card, {
         perspective: 800,
@@ -66,7 +64,6 @@ const Blogs = () => {
       };
     });
 
-    // Scroll-triggered reveal animation
     gsap.fromTo(
       cards,
       { y: 50, opacity: 0 },
@@ -95,7 +92,6 @@ const Blogs = () => {
           }}>
       <ScrollRevealHandler />
       <div className="container-fluid">
-        {/* HEADING AREA */}
         <div className="row align-items-center mb-5">
           <div className="col-lg-8 col-12" data-aos="fade-right">
             <span
@@ -117,7 +113,6 @@ const Blogs = () => {
           </div>
         </div>
 
-        {/* BLOGS CARDS */}
         <div className="row" data-aos="fade-up">
           <SwiperComponent
             breakpoints={breakpoints}
@@ -125,10 +120,10 @@ const Blogs = () => {
             spaceBetween={10}
             arrowBtns={false}
             autoplay={{
-              delay: 0, // linear continuous scroll
+              delay: 0, 
               disableOnInteraction: true,
             }}
-            speed={3000} // jitni speed chahiye adjust kar sakte ho
+            speed={3000} 
             loop={true}
           >
             {[

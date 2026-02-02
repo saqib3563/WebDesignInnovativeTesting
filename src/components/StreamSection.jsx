@@ -34,7 +34,6 @@ const StreamSection = () => {
 
   return (
     <>
-      {/* ================= Fun Facts ================= */}
       <section className="stream-sec">
         <div className="container">
           <div className="about-content-area portfolio-top-wrap">
@@ -81,7 +80,6 @@ const StreamSection = () => {
         </div>
       </section>
 
-      {/* ================= Portfolio Cards ================= */}
       <section className="stream-sec-2">
         <div className="container">
           <div className="portfolio-item-wrapper">

@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-// import Image from "next/image";
 import gsap from "gsap";
-// import dummyImage from "@/app/(web)/assets/images/flag-img-1.svg";
 import Lottie from "lottie-react";
 import Android from "@/app/(web)/assets/lottie/Android.json";
 import Bitcoin from "@/app/(web)/assets/lottie/Bitcoin.json";
@@ -66,13 +64,17 @@ const TechnologiesSection = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 className="primary-font mb-3 text-center text-black" data-aos="fade-up">
-              Technologies
-              <br />
-              We Expert
-            </h2>
+            <div className="text-center">
+              <h2
+                className="primary-font mb-3 text-center reveal-text-black"
+                data-aos="fade-up"
+              >
+                Technologies
+                <br />
+                We Expert
+              </h2>
+            </div>
 
-            {/* ===== TABS ===== */}
             <div className="tech-we-ex-menu-tabs">
               <ul>
                 {[1, 2, 3, 4, 5].map((num, i) => (
@@ -96,7 +98,6 @@ const TechnologiesSection = () => {
               </ul>
             </div>
 
-            {/* ===== CONTENT ===== */}
             <div className="tab-conlist">
               {activeTab === 1 && (
                 <ul className="tab-conlist-1">

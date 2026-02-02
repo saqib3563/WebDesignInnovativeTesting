@@ -37,7 +37,6 @@ const Footer = () => {
     },
   ];
 
-  // --- Dynamic logos array ---
   const logos = [
     logo1,
     logo2,
@@ -59,32 +58,6 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            {/* <div className="area-logo-footer">
-              <Image src={logoImage} alt="logo" className="img-fluid logo mb-3" />
-              <p className={`para-section mb-3 ${instrument_sans.className}`}>
-                Crafting bold visuals and powerful stories that inspire.
-              </p>
-
-              <div className="social-links-area mb-5">
-                {["instagram", "x-twitter", "linkedin", "youtube"].map((icon, i) => (
-                  <Link key={i} href="#" className="social-links">
-                    <i className={`fa-brands fa-${icon}`}></i>
-                  </Link>
-                ))}
-              </div>
-
-              <nav className="nav-footer-links">
-                <ul>
-                  {navLinks.map((item, i) => (
-                    <li key={i}>
-                      <Link href="#" className={`${inter.className} ${path.includes(item.path) ? 'active' : ''}`}>{item?.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-
-              <span className="separator" />
-            </div> */}
 
             <div className="footer-upper">
               <div className="row justify-content-md-center justify-content-start">
@@ -271,9 +244,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            {/* my slider herer */}
-            {/* === Dynamic Footer Slider === */}
             <div className="footer-logo-slider">
               <SwiperComponent
                 spaceBetween={30}

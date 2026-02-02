@@ -3,7 +3,6 @@ import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import revImg1 from "@/app/(web)/assets/images/blog-1.webp";
-// import Link from "next/link";
 import Image from "next/image";
 import GlobeSection from "@/components/GlobeSection";
 import FaqSection from "@/components/FaqsSection";
@@ -117,15 +116,6 @@ export default function Page() {
               </div>
             </div>
             <div className="col-md-6 text-center">
-              {/* <video
-                src="/approach-video.webm"
-                className="img-fluid"
-                autoPlay
-                playsInline
-                muted
-                loop
-                style={{ width: "100%", display: "block" }}
-              ></video> */}
               <Image src={newImg} className="inner-banner-img" />
             </div>
           </div>

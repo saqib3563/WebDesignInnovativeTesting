@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../globals.css";
 import "../responsive.css";
-// import ClientLayout from "@/components/ClientLayout";
 import Footer from "@/components/Footer";
 import AOSInit from "@/components/AOSInit";
 import Header from "@/components/Header";

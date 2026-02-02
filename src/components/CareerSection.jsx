@@ -1,5 +1,4 @@
 "use client";
-import { instrument_sans } from "@/app/(web)/assets/fonts/custom";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";
 
 import ScrollRevealHandler from "@/components/ScrollRevealHandler";

@@ -9,7 +9,6 @@ const PageLoader = ({ onComplete }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Enhanced particles system
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -89,7 +88,6 @@ const PageLoader = ({ onComplete }) => {
     }
     animate();
 
-    // Text animation
     const text1 = "PRESTIGE";
     const text2 = "IT CONSULTANT";
     
@@ -206,7 +204,6 @@ const PageLoader = ({ onComplete }) => {
           color: "#fff",
           textAlign: "center",
           lineHeight: 0.9,
-          // fontFamily: "system-ui, sans-serif",
           perspective: "1000px",
           zIndex: 1
         }}

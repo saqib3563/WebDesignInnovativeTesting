@@ -7,13 +7,6 @@ const PageTransition = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //   setIsLoading(true);
-  // }, [pathname]);
-
-  // const handleLoaderComplete = () => {
-  //   setIsLoading(false);
-  // };
 
   return (
     <>

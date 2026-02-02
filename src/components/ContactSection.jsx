@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-// import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import FancyButton from "./FancyButton";
 import ScrollRevealHandler from "./ScrollRevealHandler";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero.webp";

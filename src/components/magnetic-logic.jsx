@@ -9,47 +9,21 @@ const MagneticButton = () => {
   useEffect(() => {
     const btn = btnRef.current;
 
-    // Initial: hidden
     btn.style.transform = "scale(0)";
     btn.style.opacity = "0";
     btn.style.transition = "transform 0.5s ease, opacity 0.5s ease";
 
-    // 5 seconds delay after page load
     const timer = setTimeout(() => {
       btn.style.transform = "scale(1)";
       btn.style.opacity = "1";
     }, 5000);
 
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
 
-  //     if (scrollY > 100) {
-  //       btn.style.transform = "scale(0.8)";
-  //       btn.style.opacity = "0";
-  //     } else {
-  //       btn.style.transform = "scale(1)";
-  //       btn.style.opacity = "1";
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
    },
    []);
 
   return (
     <>
-      {/* Magnetic Button */}
-      {/* <a ref={btnRef} onClick={() => setSidebarOpen(true)} className="idea-pop">
-        <i className="fa-solid fa-arrow-right-long"></i>
-        <span className="idea-para">
-          Drop Us A <br /> Line
-        </span>
-      </a> */}
 
 
 <button className="idea-btn" ref={btnRef} onClick={() => setSidebarOpen(true)}>

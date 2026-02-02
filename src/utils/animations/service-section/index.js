@@ -26,16 +26,15 @@ const animateInitialObject = () => {
 const afterEffectAnimation = (diamondRef, sectionRef) => {
   const width = window.innerWidth;
 
-  // Get the height of the section dynamically
   const sectionHeight = sectionRef.current.offsetHeight;
 
   return {
     scrollTrigger: {
       trigger: sectionRef.current,
       start: "top top",
-      end: `+=${sectionHeight}`, // animation ends at section bottom
+      end: `+=${sectionHeight}`, 
       scrub: 1,
-      invalidateOnRefresh: true // ensures height recalculation on resize
+      invalidateOnRefresh: true 
     },
     top: "auto",
     left: "auto",

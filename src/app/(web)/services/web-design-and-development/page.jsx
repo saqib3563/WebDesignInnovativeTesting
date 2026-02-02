@@ -122,7 +122,6 @@ export default function Page() {
   const sectionRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(0);
 
-  // ✅ SERVICES DATA (TEXT + IMAGE + URL)
   const services = [
     {
       title: "WordPress Web Design",
@@ -156,7 +155,6 @@ export default function Page() {
     },
   ];
 
-  // ✅ IMAGE CHANGE WITH GSAP
   const changeImage = useCallback(
     (index) => {
       if (index === currentImage) return;
