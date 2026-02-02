@@ -27,7 +27,6 @@ const ServiceRailSection = () => {
 useEffect(() => {
   const ctx = gsap.context(() => {
 
-    // ===== RTL rail (right → left) =====
     gsap.fromTo(
       ".rail-rtl",
       { xPercent: 0 },
@@ -39,7 +38,6 @@ useEffect(() => {
       }
     );
 
-    // ===== LTR rail (left → right) =====
     gsap.fromTo(
       ".rail-ltr",
       { xPercent: -50 },
@@ -63,7 +61,6 @@ useEffect(() => {
         <div className="row">
           <div className="col-12 position-relative">
 
-            {/* ===== RTL RAIL ===== */}
             <div className="scrolling-text-wrapper mb-0">
               <div className="rail-track rail-rtl d-flex">
                 {[...railOne, ...railOne].map((item, index) => (
@@ -74,7 +71,6 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* ===== LTR RAIL ===== */}
             <div className="scrolling-text-wrapper">
               <div className="rail-track rail-ltr d-flex">
                 {[...railTwo, ...railTwo].map((item, index) => (

@@ -150,7 +150,6 @@ const MagicCursor = () => {
     let mouseX = 0,
       mouseY = 0;
 
-    // Create trail particles
     for (let i = 0; i < 8; i++) {
       const trail = document.createElement("div");
       trail.className = "cursor-trail";
@@ -161,7 +160,7 @@ const MagicCursor = () => {
         background: #7C3AED;
         border-radius: 50%;
         pointer-events: none;
-        z-index: ${999990 - i};
+        z-index: ${999999 - i};
         opacity: ${1 - i * 0.12};
         transform: translate(-50%, -50%);
         box-shadow: 0 0 ${12 - i}px rgba(124,58,237,0.9);
@@ -251,7 +250,6 @@ const MagicCursor = () => {
     };
   }, []);
 
-  // Mobile disable
   if (windowRef && windowRef.innerWidth <= 767) {
     return null;
   }
@@ -263,9 +261,9 @@ const MagicCursor = () => {
         position: "fixed",
         width: "14px",
         height: "14px",
-        background: "#2E1065", // very dark purple
+        background: "#2E1065",  
         borderRadius: "50%",
-        border: "2px solid #DDD6FE", // light outline (key for white bg)
+        border: "2px solid #DDD6FE", 
         pointerEvents: "none",
         zIndex: 9999,
         transform: "translate(-50%, -50%)",

@@ -1,12 +1,9 @@
 "use client";
 
-// import { useState } from "react";
 import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import { instrument_sans, inter } from "@/app/(web)/assets/fonts/custom";
 import ScrollRevealHandler from "./ScrollRevealHandler";
 
-// import ServiceImage1 from "@/app/(web)/assets/images/s1-img.webp";
-import ServiceImage2 from "@/app/(web)/assets/images/s1-img.webp";
 import FancyButton from "./FancyButton";
 import Image from "next/image";
 import Service1 from "@/app/(web)/assets/images/service1.jpg";
@@ -28,7 +25,6 @@ import gsap from "gsap";
 import { useGSAP } from "@/hooks/useGSAP";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
 const OurServices = () => {
   const router = useRouter();
 

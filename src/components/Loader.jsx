@@ -4,7 +4,6 @@ const Loader = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Fast loader - 1.5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
     }, 1500);

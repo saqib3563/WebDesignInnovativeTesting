@@ -11,10 +11,8 @@ const page = () => {
 
       <CareerSection />
 
-      {/* Globe Section */}
       <GlobeSection />
 
-      {/* Faq Section */}
       <FaqSection />
     </>
   );

@@ -18,12 +18,6 @@ const ServiceSection = () => {
   const sectionRef = useRef(null);
   const diamondRef = useRef(null);
 
-  //   const contentTexts = [
-  //     "UI/UX Design",
-  //     "Development",
-  //     "Copy Writing",
-  //     "Branding & Strategy",
-  //   ];
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +42,6 @@ const ServiceSection = () => {
       className=" padd-x service-section position-relative"
     >
       <div className="container-fluid">
-        {/* Heading */}
         <div className="row mb-5">
           <div className="col-12">
             <span
@@ -105,40 +98,6 @@ const ServiceSection = () => {
               </Link>
             </div>
           </div>
-
-          {/* <div className="col-md-6 col-12 mb-5 mb-md-0">
-            <div className="service-img-wrap">
-              <Image
-                src={columnImag1}
-                alt="service-image"
-                height={400}
-                style={{ width: "80%" }}
-              />
-            </div>
-          </div>
-
-          <div className="col-md-6 col-12">
-            <div className="row">
-              <div className="col-12">
-                <div className="text_selectors_area">
-                  {contentTexts.map((text, i) => (
-                    <div key={i} className="text-1">
-                      <span
-                        className={`number_count ${instrument_sans.className}`}
-                      >
-                        [{i + 1}]
-                      </span>
-                      <span className="primary-font text_selectors">
-                        {text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          {/* 🔷 Diamond (Animation Safe) */}
           <Image
             ref={diamondRef}
             src={diamondImage}

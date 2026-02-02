@@ -49,7 +49,7 @@ const SwiperComponent = ({
       if (!bullet) return;
 
       const index = Number(bullet.dataset.index);
-      swiper.slideToLoop(index); // 🔥 loop-safe
+      swiper.slideToLoop(index); 
     };
 
     document.addEventListener("click", handleClick);

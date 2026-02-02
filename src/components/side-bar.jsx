@@ -2,27 +2,34 @@
 
 
 import Link from "next/link";
-// import logoImage from "@/app/(web)/assets/images/logo.avif"
-
-
 const SideBar = () => {
 
 
 
   return (
-    <section className="main-menu-sec">
-    <div className="container">
+    <section className="main-menu-sec padd-x">
+    <div className="container-fluid">
         <div className="row">
             <div className="col-12 col-md-7 col-lg-8 col-xl-8">
                 <nav className="navigation">
                     <ul>
                         <li><Link href="/">HOME</Link></li>
                         <li><Link href="/about">ABOUT US</Link></li>
-                        <li className="hover-parent position-relative">
+                        <li className="hover-parent">
                             <Link href="/services">SERVICES</Link>
                             <ul className="sub-menu">
                                 <li className="active"><Link href="#">Mobile Application</Link>
                                     <ul className="sub-child active">
+                                        <li><Link href="#">iOS App Development</Link></li>
+                                    </ul>
+                                </li>
+                                <li className=""><Link href="#">Mobile Application</Link>
+                                    <ul className="sub-child">
+                                        <li><Link href="#">iOS App Development</Link></li>
+                                    </ul>
+                                </li>
+                                <li className=""><Link href="#">Mobile Application</Link>
+                                    <ul className="sub-child">
                                         <li><Link href="#">iOS App Development</Link></li>
                                     </ul>
                                 </li>
@@ -35,7 +42,7 @@ const SideBar = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="col-12 col-md-5 col-lg-2 col-xl-2">
+            <div className="col-12 col-md-5 col-lg-3 col-xl-3">
                 <ul className="menu-info">
                     <li>
                         <div className="box">

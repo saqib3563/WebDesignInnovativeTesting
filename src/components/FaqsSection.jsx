@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { FaqAnimation } from "@/utils/animations/faqs";
 import Image from "next/image";
 import web_box from "@/app/(web)/assets/images/innovation_box_2.png";
-// import client_image_7 from "@/app/(web)/assets/images/client_image-7.png";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
-// import ScrollRevealHandler from "@/components/ScrollRevealHandler";
+import ScrollRevealHandler from "@/components/ScrollRevealHandler";
 import FancyButton from "./FancyButton";
 const FaqSection = () => {
   const renderLabel = (text) =>
@@ -72,7 +71,7 @@ const FaqSection = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* <ScrollRevealHandler /> */}
+      <ScrollRevealHandler />
       <div className="container-fluid">
         <div className="row  padd-y padd-x row-gap-3 align-items-center">
           <div className="col-lg-5 col-12">
@@ -81,7 +80,7 @@ const FaqSection = () => {
             >
               [ Faqs ]
             </span>
-            <h2 className="primary-font text-black" data-aos="fade-right">
+            <h2 className="primary-font reveal-text-black" data-aos="fade-right">
               Got <br />
               Questions?
             </h2>
@@ -95,15 +94,6 @@ const FaqSection = () => {
                   Tell details about your project
                 </h2>
                 <form action="#">
-                  {/* <div className="wrp">
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Full name"
-                      className="text-inp"
-                    />
-                  </div> */}
                   <div className="wave-group">
                     <input
                       type="text"
@@ -167,7 +157,6 @@ const FaqSection = () => {
                         className="accordion-custom-head"
                         onClick={() => toggleAccordion(index)}
                       >
-                        {/* Counting Number */}
                         <span className="faq-count primary-font">
                           {(index + 1).toString().padStart(2, "0")}
                         </span>
@@ -198,7 +187,6 @@ const FaqSection = () => {
             <div className="scrolling-text">
               <div className="rail">
                 <h4 className="primary-font slide-font text-black">
-                  {/* WebDesignInnovators.COM */}
                   PrestigeItConsulting.COM
                 </h4>
                 <h4 className="primary-font slide-font text-black">

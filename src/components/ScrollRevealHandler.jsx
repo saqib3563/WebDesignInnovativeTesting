@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@/hooks/useGSAP";
@@ -11,7 +10,6 @@ export default function ScrollRevealHandler() {
     const elements = document.querySelectorAll(".reveal-text, .reveal-text-black");
 
     elements.forEach((el) => {
-      // initial state (fully hidden)
       gsap.set(el, {
         backgroundPosition: "100% 0",
       });
@@ -20,11 +18,10 @@ export default function ScrollRevealHandler() {
         backgroundPosition: "0% 0",
         ease: "power2.out",
         scrollTrigger: {
-          trigger: el,               // har heading apna trigger
-          start: "top 70%",           // early trigger khatam
+          trigger: el,             
+          start: "top 70%",         
           end: "top 40%",
-          scrub: true,               // scroll ke sath smooth
-          // markers: true,           // debug ke liye
+          scrub: true, 
         },
       });
     });

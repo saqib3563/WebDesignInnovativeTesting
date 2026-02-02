@@ -11,9 +11,7 @@ import dot from "@/app/(web)/assets/images/dot.avif";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { useEffect } from "react";
 import { AnimationAboutUs } from "@/utils/animations/about-us";
-import SwiperComponent from "./slider";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { useGSAP } from "@/hooks/useGSAP";
@@ -30,7 +28,6 @@ const AboutUs = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Store original text content before animation
     const headingEl = document.querySelector(".abt-heading");
     const paraEl = document.querySelector(".abt-para");
     const secondParaEl = document.querySelector(".second-para");
@@ -83,7 +80,7 @@ const AboutUs = () => {
             slidesPerView={7}
             spaceBetween={10}
             loop={true}
-            speed={3000} // slow & smooth
+            speed={3000}  
             allowTouchMove={false}
             freeMode={{
               enabled: true,

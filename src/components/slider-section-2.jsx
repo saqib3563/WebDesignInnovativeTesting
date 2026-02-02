@@ -72,7 +72,6 @@ const SliderSection2 = () => {
   return (
     <div ref={wrapperRef} className="position-relative">
 
-      {/* ===== SINGLE DOTS UI ===== */}
       <div className="dots-area">
         {slides.map((_, i) => (
           <span
@@ -86,7 +85,6 @@ const SliderSection2 = () => {
         ))}
       </div>
 
-      {/* ===== SLIDES ===== */}
       {slides.map((slide, index) => (
         <section key={index} className="panel green">
           <Image

@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { useGSAP } from "@/hooks/useGSAP";
 import gsap from "gsap";
-// import hero_bg from "@/app/(web)/assets/images/Hero.webp";
 import hero_bg_latest from "@/app/(web)/assets/images/Hero-latest.png";
 
 const ServiceBanner = () => {
@@ -14,7 +13,6 @@ const ServiceBanner = () => {
 
   useGSAP(
     () => {
-      // initial state
       gsap.set(firstTextRef.current, { x: 0 });
       gsap.set(secondTextRef.current, { x: 0 });
       gsap.set(h1Ref.current, { rotate: 0 });
